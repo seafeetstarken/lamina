@@ -533,40 +533,57 @@
         </div>
       </div>
       <div class="lamina-card" style="margin-top: 1.5rem; border-color: var(--accent-gold-border);">
-        <div class="lamina-badge lamina-badge-gold" style="margin-bottom: 0.75rem;">Escopo tecnico Asaas</div>
-        <h4 class="lamina-h4" style="margin-top:0;">Da integracao assistida ao LAMINA Pay</h4>
-        <p class="lamina-text text-muted">A primeira versao pode nascer de forma pragmatica: o cliente cria a conta Asaas em nome da propria barbearia, conclui cadastro, validacao e dados bancarios, e a LAMINA apenas conecta o software a essa conta. Isso reduz friccao regulatoria inicial e permite validar cobrancas, assinaturas, Pix, cartao e conciliacao antes de assumir a experiencia financeira completa.</p>
+        <div class="lamina-badge lamina-badge-gold" style="margin-bottom: 0.75rem;">Analise para decisao</div>
+        <h4 class="lamina-h4" style="margin-top:0;">Asaas do cliente vs. LAMINA Pay</h4>
+        <p class="lamina-text text-muted">Ainda nao precisa ser uma decisao fechada, mas os fluxos favorecem fortemente a tese do LAMINA Pay. O modelo inicial, em que o cliente cria a propria conta Asaas e fornece a API key/webhook, e mais rapido para validar tecnicamente. Porem, ele cria atrito no onboarding, aumenta risco operacional e limita a captura de receita transacional. O LAMINA Pay exige mais arquitetura e cuidado, mas entrega uma experiencia mais simples para o cliente e abre uma escala de faturamento muito mais agressiva.</p>
 
         <div class="strategy-grid" style="margin-top: 1rem;">
           <div class="strategy-card">
-            <span class="strategy-metric">Fase 1</span>
-            <h4 class="lamina-h4">Conta Asaas do cliente</h4>
-            <p class="lamina-text text-muted" style="margin:0;">A barbearia cria e administra a propria conta Asaas. A LAMINA coleta de forma segura a API key, configura o endpoint de webhook e sincroniza clientes, cobrancas, assinaturas e status de pagamento no painel.</p>
+            <span class="strategy-metric">Opcao A</span>
+            <h4 class="lamina-h4">Cliente cria a conta Asaas</h4>
+            <p class="lamina-text text-muted" style="margin:0;">A barbearia cria a conta, valida documentos, configura dados bancarios, gera API key e informa a LAMINA. O sistema conecta essa conta ao tenant, cria cobrancas e escuta eventos via webhook. E uma ponte valida para piloto, mas depende de acao tecnica do cliente.</p>
           </div>
           <div class="strategy-card">
-            <span class="strategy-metric">Fase 2</span>
-            <h4 class="lamina-h4">Onboarding guiado</h4>
-            <p class="lamina-text text-muted" style="margin:0;">O painel deve ter um checklist: criar conta Asaas, validar documentos, cadastrar chave Pix, informar API key, ativar webhook, testar cobranca sandbox/producao e confirmar recebimento de evento.</p>
+            <span class="strategy-metric">Opcao B</span>
+            <h4 class="lamina-h4">LAMINA Pay como camada propria</h4>
+            <p class="lamina-text text-muted" style="margin:0;">A LAMINA abstrai a complexidade financeira: cria ou gerencia subcontas, padroniza webhooks, aplica regras de split/take rate e entrega ao cliente uma implantacao guiada. A barbearia deixa de mexer em chaves, endpoints e configuracoes sensiveis.</p>
           </div>
           <div class="strategy-card">
-            <span class="strategy-metric">Fase 3</span>
-            <h4 class="lamina-h4">Webhook como fonte de verdade</h4>
-            <p class="lamina-text text-muted" style="margin:0;">Toda mudanca financeira relevante entra por webhook: pagamento criado, confirmado, vencido, estornado, assinatura atualizada e falhas. O backend precisa registrar eventos com idempotencia para evitar duplicidade.</p>
+            <span class="strategy-metric">Sinal comercial</span>
+            <h4 class="lamina-h4">Menos friccao aumenta conversao</h4>
+            <p class="lamina-text text-muted" style="margin:0;">Quanto mais passos tecnicos o dono da barbearia precisa executar, maior o risco de travar a venda. Se a promessa e tecnologia dedicada sem dor, o pagamento tambem precisa parecer plug-and-play.</p>
           </div>
           <div class="strategy-card">
-            <span class="strategy-metric">Fase 4</span>
-            <h4 class="lamina-h4">Evolucao para LAMINA Pay</h4>
-            <p class="lamina-text text-muted" style="margin:0;">Depois de validar volume e recorrencia, migramos para uma experiencia proprietaria com subcontas, split, regras de comissao, take rate e menor dependencia operacional do cliente configurar chaves manualmente.</p>
+            <span class="strategy-metric">Sinal financeiro</span>
+            <h4 class="lamina-h4">A receita deixa de ser so mensalidade</h4>
+            <p class="lamina-text text-muted" style="margin:0;">Com LAMINA Pay, cada transacao vira potencial de monetizacao: taxa Pix/cartao, take rate, split, assinatura recorrente, repasse de barbeiro e fechamento de caixa. Isso cria uma curva de faturamento mais agressiva que SaaS puro.</p>
           </div>
         </div>
 
-        <h4 class="lamina-h4" style="margin-top: 1.5rem;">Dados e controles obrigatorios</h4>
+        <h4 class="lamina-h4" style="margin-top: 1.5rem;">Comparativo de fluxo operacional</h4>
+        <div style="overflow-x:auto; margin-top: 0.75rem;">
+          <table class="lamina-table-dense">
+            <thead>
+              <tr><th>Critério</th><th>Asaas do cliente</th><th>LAMINA Pay</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Onboarding</strong></td><td>Cliente precisa criar conta, configurar chave e liberar acesso.</td><td>Cliente informa dados básicos; a LAMINA conduz a ativacao financeira.</td></tr>
+              <tr><td><strong>Suporte</strong></td><td>Mais chamados sobre API key, webhook, permissao e configuracao.</td><td>Menos variacao operacional, pois o fluxo fica padronizado.</td></tr>
+              <tr><td><strong>Escala</strong></td><td>Cada cliente vira uma integracao quase artesanal.</td><td>Modelo replicavel para centenas de barbearias com a mesma arquitetura.</td></tr>
+              <tr><td><strong>Receita</strong></td><td>Principalmente mensalidade e setup.</td><td>Mensalidade + setup + margem transacional + produtos financeiros futuros.</td></tr>
+              <tr><td><strong>Controle</strong></td><td>Dados financeiros ficam fragmentados em contas individuais.</td><td>Conciliacao, split, relatorios e regra de negocio ficam centralizados.</td></tr>
+              <tr><td><strong>Risco</strong></td><td>Menor complexidade inicial, maior atrito comercial.</td><td>Maior responsabilidade tecnica, maior potencial de defensabilidade.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 class="lamina-h4" style="margin-top: 1.5rem;">Recomendacao para apresentar aos socios</h4>
         <ul class="lamina-list" style="margin-bottom:0;">
-          <li><strong>Credenciais:</strong> API key do Asaas armazenada criptografada, nunca exibida apos salvar, com rotina para rotacao/revogacao.</li>
-          <li><strong>Webhook:</strong> URL unica por tenant, token/segredo de validacao, logs de entrega, retentativas e tela de diagnostico.</li>
-          <li><strong>Conciliacao:</strong> cada cobranca precisa mapear cliente, profissional, unidade, servico, assinatura e origem do pagamento.</li>
-          <li><strong>Seguranca:</strong> acesso financeiro restrito a owner/admin, trilha de auditoria e separacao rigorosa por tenant_id.</li>
-          <li><strong>Migracao:</strong> manter uma camada PaymentProvider para trocar de "Asaas do cliente" para "LAMINA Pay" sem reescrever agenda, app ou painel.</li>
+          <li><strong>Nao descartar a integracao direta:</strong> usar o modelo "Asaas do cliente" como caminho de piloto, contingencia ou fase de aprendizado.</li>
+          <li><strong>Priorizar arquitetura para LAMINA Pay:</strong> desde o inicio, criar uma camada PaymentProvider para permitir migrar sem reescrever app, agenda ou painel.</li>
+          <li><strong>Validar com poucos clientes:</strong> medir tempo de ativacao, quantidade de chamados, pagamentos processados, falhas de webhook e adesao ao pagamento integrado.</li>
+          <li><strong>Decidir por dados:</strong> se o fluxo manual gerar atrito, suporte alto ou perda de venda, isso reforca a virada para LAMINA Pay como produto central.</li>
+          <li><strong>Tese atual:</strong> analisando escala, receita e simplicidade de implantacao, LAMINA Pay parece o caminho mais forte, mas deve ser apresentado como decisao estrategica baseada em fluxo e validacao.</li>
         </ul>
       </div>
     </section>
