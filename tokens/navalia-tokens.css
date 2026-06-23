@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   NAVALIA — Design Tokens
+   NAVALIA | Design Tokens
    Brand Guide v1.0 | Dark Precision (O Sistema Afiado)
    Precisão tecnológica para barbearias
    ═══════════════════════════════════════════════════════════ */
@@ -8,7 +8,7 @@
   /* ── 1. PALETA DE CORES (OBSIDIAN STEEL) ── */
 
   /* Cores de Fundo Absolutas */
-  --bg-void:    #07080A;  /* Deep Steel Void (Fundo absoluto — mais escuro que o Acessor) */
+  --bg-void:    #07080A;  /* Deep Steel Void (Fundo absoluto, mais escuro que o Acessor) */
   --bg-surface: #111318;  /* Carbon Surface (Cards e painéis) */
   --bg-elevated:#1A1D24;  /* Elevated Steel (Modais, dropdowns, elementos elevados) */
   --bg-hover:   #252830;  /* Hover State */
@@ -22,22 +22,22 @@
   --border-thin: #2A2D36;  /* Borda estrutural padrão */
   --border-focus:#3D4150;  /* Borda de foco / hover */
 
-  /* Cor Primária — A Precisão (Aquamarine Steel) */
-  --accent-primary:       #00D4AA;  /* Precision Aqua — navalia afiada, precisa, cirúrgica */
+  /* Cor Primária: A Precisão (Aquamarine Steel) */
+  --accent-primary:       #00D4AA;  /* Precision Aqua: navalha afiada, precisa, cirúrgica */
   --accent-primary-hover: #00E8BC;
   --accent-primary-muted: #00B894;
   --accent-primary-bg:    rgba(0, 212, 170, 0.08);
   --accent-primary-border:rgba(0, 212, 170, 0.25);
   --accent-primary-glow:  rgba(0, 212, 170, 0.35);
 
-  /* Cor Secundária — O Premium (Silver Gold) */
-  --accent-gold:       #D4A853;  /* Refined Gold — o toque premium, barbershop clássico */
+  /* Cor Secundária: O Premium (Silver Gold) */
+  --accent-gold:       #D4A853;  /* Refined Gold: o toque premium, barbershop clássico */
   --accent-gold-hover: #E0B863;
   --accent-gold-bg:    rgba(212, 168, 83, 0.08);
   --accent-gold-border:rgba(212, 168, 83, 0.25);
   --accent-gold-glow:  rgba(212, 168, 83, 0.30);
 
-  /* Cor de Alerta — A Urgência */
+  /* Cor de Alerta: A Urgência */
   --accent-danger:       #FF4757;  /* Razor Red */
   --accent-danger-bg:    rgba(255, 71, 87, 0.10);
   --accent-danger-border:rgba(255, 71, 87, 0.30);
@@ -49,8 +49,8 @@
   --color-info:    #5B9FFF;
 
   /* ── 2. TIPOGRAFIA ── */
-  --font-display: 'Space Grotesk', system-ui, sans-serif;  /* Títulos — geométrica, afiada */
-  --font-body:    'Inter', system-ui, sans-serif;           /* Corpo — legível, profissional */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;  /* Títulos: geométrica, afiada */
+  --font-body:    'Inter', system-ui, sans-serif;           /* Corpo: legível, profissional */
   --font-mono:    'JetBrains Mono', 'Fira Code', monospace; /* Dados, kickers, tags */
 
   /* ── 3. ESPAÇAMENTOS (Sistema de 4px) ── */
@@ -228,7 +228,7 @@ body {
 
 
 /* ═══════════════════════════════════════════════════════════
-   KICKER (Section Label — Estilo Mono Técnico)
+   KICKER (Section Label: Estilo Mono Técnico)
    ═══════════════════════════════════════════════════════════ */
 
 .navalia-kicker {
@@ -288,7 +288,7 @@ body {
   pointer-events: none;
 }
 
-/* Primary — Precision Aqua */
+/* Primary: Precision Aqua */
 .navalia-btn-primary {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-muted));
   color: var(--bg-void);
@@ -306,7 +306,7 @@ body {
   transform: translateY(0);
 }
 
-/* Gold — Premium Action */
+/* Gold: Premium Action */
 .navalia-btn-gold {
   background: linear-gradient(135deg, var(--accent-gold), #C49B45);
   color: var(--bg-void);
@@ -320,7 +320,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Secondary — Outline Aqua */
+/* Secondary: Outline Aqua */
 .navalia-btn-secondary {
   background: transparent;
   color: var(--accent-primary);
