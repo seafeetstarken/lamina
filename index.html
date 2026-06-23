@@ -532,6 +532,43 @@
           <p class="lamina-text text-muted" style="margin-top: 0.5rem;">Cliente paga R$ 100 via LÂMINA Pay. Nossa API injeta a regra de negócio financeira: R$ 50 vai direto automático para a conta bancária do barbeiro que atendeu, R$ 50 para o dono da barbearia. Fim do fechamento de caixa manual.</p>
         </div>
       </div>
+      <div class="lamina-card" style="margin-top: 1.5rem; border-color: var(--accent-gold-border);">
+        <div class="lamina-badge lamina-badge-gold" style="margin-bottom: 0.75rem;">Escopo tecnico Asaas</div>
+        <h4 class="lamina-h4" style="margin-top:0;">Da integracao assistida ao LAMINA Pay</h4>
+        <p class="lamina-text text-muted">A primeira versao pode nascer de forma pragmatica: o cliente cria a conta Asaas em nome da propria barbearia, conclui cadastro, validacao e dados bancarios, e a LAMINA apenas conecta o software a essa conta. Isso reduz friccao regulatoria inicial e permite validar cobrancas, assinaturas, Pix, cartao e conciliacao antes de assumir a experiencia financeira completa.</p>
+
+        <div class="strategy-grid" style="margin-top: 1rem;">
+          <div class="strategy-card">
+            <span class="strategy-metric">Fase 1</span>
+            <h4 class="lamina-h4">Conta Asaas do cliente</h4>
+            <p class="lamina-text text-muted" style="margin:0;">A barbearia cria e administra a propria conta Asaas. A LAMINA coleta de forma segura a API key, configura o endpoint de webhook e sincroniza clientes, cobrancas, assinaturas e status de pagamento no painel.</p>
+          </div>
+          <div class="strategy-card">
+            <span class="strategy-metric">Fase 2</span>
+            <h4 class="lamina-h4">Onboarding guiado</h4>
+            <p class="lamina-text text-muted" style="margin:0;">O painel deve ter um checklist: criar conta Asaas, validar documentos, cadastrar chave Pix, informar API key, ativar webhook, testar cobranca sandbox/producao e confirmar recebimento de evento.</p>
+          </div>
+          <div class="strategy-card">
+            <span class="strategy-metric">Fase 3</span>
+            <h4 class="lamina-h4">Webhook como fonte de verdade</h4>
+            <p class="lamina-text text-muted" style="margin:0;">Toda mudanca financeira relevante entra por webhook: pagamento criado, confirmado, vencido, estornado, assinatura atualizada e falhas. O backend precisa registrar eventos com idempotencia para evitar duplicidade.</p>
+          </div>
+          <div class="strategy-card">
+            <span class="strategy-metric">Fase 4</span>
+            <h4 class="lamina-h4">Evolucao para LAMINA Pay</h4>
+            <p class="lamina-text text-muted" style="margin:0;">Depois de validar volume e recorrencia, migramos para uma experiencia proprietaria com subcontas, split, regras de comissao, take rate e menor dependencia operacional do cliente configurar chaves manualmente.</p>
+          </div>
+        </div>
+
+        <h4 class="lamina-h4" style="margin-top: 1.5rem;">Dados e controles obrigatorios</h4>
+        <ul class="lamina-list" style="margin-bottom:0;">
+          <li><strong>Credenciais:</strong> API key do Asaas armazenada criptografada, nunca exibida apos salvar, com rotina para rotacao/revogacao.</li>
+          <li><strong>Webhook:</strong> URL unica por tenant, token/segredo de validacao, logs de entrega, retentativas e tela de diagnostico.</li>
+          <li><strong>Conciliacao:</strong> cada cobranca precisa mapear cliente, profissional, unidade, servico, assinatura e origem do pagamento.</li>
+          <li><strong>Seguranca:</strong> acesso financeiro restrito a owner/admin, trilha de auditoria e separacao rigorosa por tenant_id.</li>
+          <li><strong>Migracao:</strong> manter uma camada PaymentProvider para trocar de "Asaas do cliente" para "LAMINA Pay" sem reescrever agenda, app ou painel.</li>
+        </ul>
+      </div>
     </section>
 
     <!-- 7. CI/CD -->
