@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Central da LÂMINA — Escopo Master & Design System</title>
+  <title>Central da NAVALIA — Escopo Master & Design System</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Core Tokens -->
-  <link rel="stylesheet" href="./tokens/lamina-tokens.css">
+  <link rel="stylesheet" href="./tokens/navalia-tokens.css">
 
   <style>
     /* ── Layout da Documentação Densificada ── */
@@ -93,10 +93,10 @@
     .section-desc { font-size: 1.05rem; color: var(--text-muted); max-width: 800px; margin-top: 0.75rem; line-height: 1.6; }
 
     /* ── Tipografia Interna (Conteúdo Pesado) ── */
-    p.lamina-text { font-size: 0.95rem; line-height: 1.6; color: var(--text-main); margin-bottom: 1rem; }
-    ul.lamina-list { margin-top: 0.5rem; margin-bottom: 1rem; padding-left: 1.2rem; color: var(--text-main); font-size: 0.95rem; }
-    ul.lamina-list li { margin-bottom: 0.4rem; }
-    ul.lamina-list li strong { color: var(--text-pure); }
+    p.navalia-text { font-size: 0.95rem; line-height: 1.6; color: var(--text-main); margin-bottom: 1rem; }
+    ul.navalia-list { margin-top: 0.5rem; margin-bottom: 1rem; padding-left: 1.2rem; color: var(--text-main); font-size: 0.95rem; }
+    ul.navalia-list li { margin-bottom: 0.4rem; }
+    ul.navalia-list li strong { color: var(--text-pure); }
 
     /* ── Components do Design System ── */
     .color-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
@@ -139,10 +139,10 @@
     .chat-ai { background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-muted)); color: var(--bg-void); font-weight: 500; align-self: flex-end; border-bottom-right-radius: var(--radius-xs); box-shadow: 0 4px 16px var(--accent-primary-glow); }
 
     /* ── Tabelas e Timelines Densas ── */
-    .lamina-table-dense { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
-    .lamina-table-dense th, .lamina-table-dense td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border-thin); }
-    .lamina-table-dense th { background: var(--bg-surface); color: var(--accent-primary); font-family: var(--font-mono); font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; }
-    .lamina-table-dense tr:last-child td { border-bottom: none; }
+    .navalia-table-dense { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+    .navalia-table-dense th, .navalia-table-dense td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border-thin); }
+    .navalia-table-dense th { background: var(--bg-surface); color: var(--accent-primary); font-family: var(--font-mono); font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; }
+    .navalia-table-dense tr:last-child td { border-bottom: none; }
     
     .timeline-dense { border-left: 2px solid var(--border-thin); padding-left: 1.5rem; margin: 1rem 0; }
     .timeline-item-dense { position: relative; margin-bottom: 1.5rem; }
@@ -231,10 +231,10 @@
       .section-kicker { font-size: 0.68rem; letter-spacing: 0.14em; }
       .section-title { font-size: 1.55rem; line-height: 1.12; }
       .section-desc { font-size: 0.98rem; line-height: 1.55; }
-      .lamina-text, ul.lamina-list { font-size: 0.92rem; line-height: 1.55; }
-      .lamina-manifesto { padding: 1.1rem !important; border-radius: 18px; }
-      .lamina-manifesto-quote { font-size: 1.45rem; line-height: 1.1; }
-      .lamina-card { padding: 1rem; }
+      .navalia-text, ul.navalia-list { font-size: 0.92rem; line-height: 1.55; }
+      .navalia-manifesto { padding: 1.1rem !important; border-radius: 18px; }
+      .navalia-manifesto-quote { font-size: 1.45rem; line-height: 1.1; }
+      .navalia-card { padding: 1rem; }
       .card-showcase-grid { grid-template-columns: 1fr !important; }
       .strategy-grid,
       .strategy-roadmap { grid-template-columns: 1fr !important; }
@@ -248,21 +248,21 @@
       .chat-demo { max-width: 100%; padding: 1rem; }
       .chat-bubble { max-width: 100%; }
       [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-      .lamina-table-dense { display: block; width: 100%; }
-      .lamina-table-dense thead { display: none; }
-      .lamina-table-dense tbody,
-      .lamina-table-dense tr,
-      .lamina-table-dense td { display: block; width: 100%; }
-      .lamina-table-dense tr {
+      .navalia-table-dense { display: block; width: 100%; }
+      .navalia-table-dense thead { display: none; }
+      .navalia-table-dense tbody,
+      .navalia-table-dense tr,
+      .navalia-table-dense td { display: block; width: 100%; }
+      .navalia-table-dense tr {
         padding: 0.85rem 0;
         border-bottom: 1px solid var(--border-thin);
       }
-      .lamina-table-dense td {
+      .navalia-table-dense td {
         border: none;
         padding: 0.2rem 0;
         white-space: normal;
       }
-      .lamina-table-dense td:first-child {
+      .navalia-table-dense td:first-child {
         color: var(--accent-primary);
         font-family: var(--font-display);
         font-weight: 700;
@@ -279,13 +279,13 @@
       .card-showcase-grid,
       .color-grid { grid-template-columns: 1fr !important; }
       .color-grid { gap: 0.65rem; }
-      .lamina-card { padding: 0.9rem; }
-      .lamina-btn { width: 100%; justify-content: center; }
+      .navalia-card { padding: 0.9rem; }
+      .navalia-btn { width: 100%; justify-content: center; }
       .btn-showcase { flex-direction: column; align-items: stretch; }
       .btn-showcase button { width: 100%; margin-bottom: 0.5rem; }
       .badge-showcase { flex-direction: column; align-items: flex-start; }
       .component-board { padding: 0.9rem; }
-      .lamina-manifesto-quote { font-size: 1.25rem; }
+      .navalia-manifesto-quote { font-size: 1.25rem; }
     }
   </style>
 </head>
@@ -293,29 +293,30 @@
 
   <!-- Mobile Header -->
   <div class="mobile-header">
-    <a href="./index.html" class="mobile-header-logo sidebar-logo" style="text-decoration: none;">l&acirc;mina<span class="blade-mark">&#x27CB;</span></a>
+    <a href="./index.html" class="mobile-header-logo sidebar-logo" style="text-decoration: none;">navalia<span class="blade-mark">&#x27CB;</span></a>
     <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
   </div>
   <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
   <!-- Sidebar -->
   <aside class="ds-sidebar">
     <div class="sidebar-brand">
-      <a href="./index.html" class="sidebar-logo" style="text-decoration: none;">lâmina<span class="blade-mark">⟋</span></a>
+      <a href="./index.html" class="sidebar-logo" style="text-decoration: none;">navalia<span class="blade-mark">⟋</span></a>
       <div class="sidebar-version">Central Info & Design System v2.0</div>
     </div>
 
     <nav class="ds-nav">
       <!-- Categoria: O Negocio -->
       <div class="nav-label" style="margin-top: 1rem;">Escopo Master &amp; Negocios</div>
-      <a href="#manifesto" class="nav-link active">1. O Manifesto LAMINA</a>
+      <a href="#manifesto" class="nav-link active">1. O Manifesto NAVALIA</a>
       <a href="#marca" class="nav-link">2. A Marca e o Mercado</a>
+      <a href="#naming" class="nav-link">2.1 Naming &amp; Registro INPI</a>
       <a href="#origem" class="nav-link">3. Visao Executiva e Origem</a>
       <a href="#storytelling" class="nav-link">4. Storytelling &amp; Timeline</a>
       <a href="#ecossistema" class="nav-link">5. O Ecossistema (4 Pilares)</a>
       <a href="#webadmin" class="nav-link">6. Web Admin &amp; Permissoes</a>
-      <a href="#laminapay" class="nav-link">7. LAMINA Pay: Motor Fintech</a>
+      <a href="#navaliapay" class="nav-link">7. NAVALIA Pay: Motor Fintech</a>
       <a href="#devops" class="nav-link">8. Fabrica de Apps (CI/CD)</a>
-      <a href="#ia" class="nav-link">9. LAMINA IA (Cockpit &amp; RAG)</a>
+      <a href="#ia" class="nav-link">9. NAVALIA IA (Cockpit &amp; RAG)</a>
       <a href="#gamificacao" class="nav-link">10. Matematica da Gamificacao</a>
       <a href="#mercado" class="nav-link">11. Mercado &amp; Concorrencia</a>
       <a href="#pricing" class="nav-link">12. Modelo de Negocio &amp; Setup</a>
@@ -344,12 +345,12 @@
       <div class="section-header">
         <div class="section-kicker">01 // Posicionamento da Marca</div>
         <h1 class="section-title">Precisão tecnológica para barbearias.</h1>
-        <p class="section-desc">A LÂMINA é a plataforma de tecnologia dedicada que transforma barbearias comuns em operações digitais de elite. App com sua marca, gestão inteligente e IA — tudo afiado.</p>
+        <p class="section-desc">A NAVALIA é a plataforma de tecnologia dedicada que transforma barbearias comuns em operações digitais de elite. App com sua marca, gestão inteligente e IA — tudo afiado.</p>
       </div>
-      <div class="lamina-manifesto" style="padding: var(--space-8); margin-bottom: 2rem;">
-        <div class="lamina-manifesto-quote">"Sua barbearia merece<br><span>tecnologia afiada.</span>"</div>
-        <p class="lamina-text" style="margin-top: 1.5rem; max-width: 800px; position: relative; z-index: 1;">
-          Barbearias gastam fortunas em decoração premium, produtos importados e marketing — mas continuam gerenciando agendamentos pelo WhatsApp e caderninho. A LÂMINA entrega o que falta: um app próprio com sua marca, painel administrativo profissional e inteligência artificial que agenda, atende e fideliza seus clientes.
+      <div class="navalia-manifesto" style="padding: var(--space-8); margin-bottom: 2rem;">
+        <div class="navalia-manifesto-quote">"Sua barbearia merece<br><span>tecnologia afiada.</span>"</div>
+        <p class="navalia-text" style="margin-top: 1.5rem; max-width: 800px; position: relative; z-index: 1;">
+          Barbearias gastam fortunas em decoração premium, produtos importados e marketing — mas continuam gerenciando agendamentos pelo WhatsApp e caderninho. A NAVALIA entrega o que falta: um app próprio com sua marca, painel administrativo profissional e inteligência artificial que agenda, atende e fideliza seus clientes.
         </p>
         <p style="margin-top: 1rem; color: var(--accent-gold); font-weight: 600; font-family: var(--font-display); position: relative; z-index: 1;">
           Não somos software genérico. Somos a infraestrutura digital dedicada da sua barbearia.
@@ -360,38 +361,75 @@
     <!-- 2. Marca e Mercado -->
     <section id="marca" class="ds-section">
       <div class="section-header">
-        <div class="section-kicker">02 // O Porquê do Nome LÂMINA</div>
-        <h2 class="section-title">A Ferramenta da Precisão.</h2>
+        <div class="section-kicker">02 // A Marca NAVALIA</div>
+        <h2 class="section-title">A Navalha da Precisão Tecnológica.</h2>
       </div>
-      <p class="lamina-text">A lâmina é a ferramenta mais perigosa e, ao mesmo tempo, a mais importante na mão de um barbeiro profissional. Ela separa um corte amador de um corte <strong>cirúrgico e afiado</strong>. Nossa tecnologia faz exatamente o mesmo pela operação da barbearia.</p>
+      <p class="navalia-text">A <strong>navalha</strong> (da qual deriva o nome <strong>NAVALIA</strong>) é a ferramenta mais perigosa e, ao mesmo tempo, a mais importante na mão de um barbeiro profissional. Ela separa um corte amador de um corte <strong>cirúrgico e afiado</strong>. Nossa tecnologia faz exatamente o mesmo pela operação da barbearia.</p>
       
-      <div class="lamina-card" style="margin: 1.5rem 0; border-color: var(--accent-primary-border);">
-        <h4 class="lamina-h4 text-primary">A Analogia Operacional</h4>
-        <ul class="lamina-list" style="margin-top: 1rem;">
+      <div class="navalia-card" style="margin: 1.5rem 0; border-color: var(--accent-primary-border);">
+        <h4 class="navalia-h4 text-primary">A Analogia Operacional</h4>
+        <ul class="navalia-list" style="margin-top: 1rem;">
           <li>Aparamos os excessos operacionais (no-shows, buracos na agenda).</li>
           <li>Cortamos a burocracia do caixa e split de pagamentos manuais.</li>
           <li>Entregamos precisão implacável no atendimento digital com IA.</li>
         </ul>
       </div>
 
-      <h3 class="lamina-h4" style="margin-top: 2rem; margin-bottom: 1rem;">O Contexto de Mercado (A Revolta contra o Genérico)</h3>
-      <p class="lamina-text">No cenário atual, a grande maioria das barbearias de alto padrão buscam evoluir tecnologicamente, mas esbarram em dois grandes inimigos:</p>
+      <h3 class="navalia-h4" style="margin-top: 2rem; margin-bottom: 1rem;">O Contexto de Mercado (A Revolta contra o Genérico)</h3>
+      <p class="navalia-text">No cenário atual, a grande maioria das barbearias de alto padrão buscam evoluir tecnologicamente, mas esbarram em dois grandes inimigos:</p>
       
       <div class="card-showcase-grid" style="margin-bottom: 1.5rem;">
-        <div class="lamina-card">
-          <div class="lamina-badge lamina-badge-danger" style="margin-bottom: 0.75rem;">Inimigo 1: Os Marketplaces</div>
-          <p class="lamina-text text-muted" style="margin-top: 0.5rem; font-size: 0.9rem;">Aplicativos genéricos (Trinks, Booksy) agrupam a sua barbearia com o concorrente da esquina. Eles captam o SEU cliente e o expõem a promoções de terceiros. Você perde o protagonismo da marca.</p>
+        <div class="navalia-card">
+          <div class="navalia-badge navalia-badge-danger" style="margin-bottom: 0.75rem;">Inimigo 1: Os Marketplaces</div>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem; font-size: 0.9rem;">Aplicativos genéricos (Trinks, Booksy) agrupam a sua barbearia com o concorrente da esquina. Eles captam o SEU cliente e o expõem a promoções de terceiros. Você perde o protagonismo da marca.</p>
         </div>
-        <div class="lamina-card">
-          <div class="lamina-badge lamina-badge-danger" style="margin-bottom: 0.75rem;">Inimigo 2: Os Robôs Engessados</div>
-          <p class="lamina-text text-muted" style="margin-top: 0.5rem; font-size: 0.9rem;">Os chatbots atuais são fluxos de árvore de decisão rígidos ("Digite 1 para agendar"). Eles são lentos, frustram o cliente final, geram atrito no WhatsApp e não entendem contexto de conversa.</p>
+        <div class="navalia-card">
+          <div class="navalia-badge navalia-badge-danger" style="margin-bottom: 0.75rem;">Inimigo 2: Os Robôs Engessados</div>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem; font-size: 0.9rem;">Os chatbots atuais são fluxos de árvore de decisão rígidos ("Digite 1 para agendar"). Eles são lentos, frustram o cliente final, geram atrito no WhatsApp e não entendem contexto de conversa.</p>
         </div>
       </div>
 
-      <p class="lamina-text">A <strong>LÂMINA</strong> se posiciona diametralmente contra isso. Não entregamos um app compartilhado; entregamos um app <strong>White-label (Tecnologia Dedicada)</strong> que tem o seu logo, suas cores e a sua marca reinando absoluta no celular do cliente. Junto disso, um LLM (IA Generativa) atende o seu WhatsApp com fluidez humana e contexto profundo.</p>
+      <p class="navalia-text">A <strong>NAVALIA</strong> se posiciona diametralmente contra isso. Não entregamos um app compartilhado; entregamos um app <strong>White-label (Tecnologia Dedicada)</strong> que tem o seu logo, suas cores e a sua marca reinando absoluta no celular do cliente. Junto disso, um LLM (IA Generativa) atende o seu WhatsApp com fluidez humana e contexto profundo.</p>
 
-      <h3 class="lamina-h4" style="margin-top: 2rem; margin-bottom: 1rem;">Tom de Voz: Direto, Confiante e Tecnológico</h3>
-      <p class="lamina-text">Somos a resposta agressiva e cirúrgica para donos de barbearias cansados de amadorismo. Nosso tom de voz abandona o "marketing fofo". Falamos de empreendedor para empreendedor e dizemos a verdade: a cadeira não enche sozinha e o agendamento manual não escala. Mostramos a solução tecnológica definitiva, com a elegância de uma marca premium de tecnologia (Obsidian Steel).</p>
+      <h3 class="navalia-h4" style="margin-top: 2rem; margin-bottom: 1rem;">Tom de Voz: Direto, Confiante e Tecnológico</h3>
+      <p class="navalia-text">Somos a resposta agressiva e cirúrgica para donos de barbearias cansados de amadorismo. Nosso tom de voz abandona o "marketing fofo". Falamos de empreendedor para empreendedor e dizemos a verdade: a cadeira não enche sozinha e o agendamento manual não escala. Mostramos a solução tecnológica definitiva, com a elegância de uma marca premium de tecnologia (Obsidian Steel).</p>
+    </section>
+
+    <!-- 2.1 Naming & Registro INPI -->
+    <section id="naming" class="ds-section">
+      <div class="section-header">
+        <div class="section-kicker">02.1 // Estudo de Naming & Viabilidade INPI</div>
+        <h2 class="section-title">A Transição para NAVALIA</h2>
+        <p class="section-desc">Como contornamos o risco de colisão de marcas e garantimos exclusividade jurídica absoluta para a nossa expansão.</p>
+      </div>
+
+      <h3 class="navalia-h4" style="margin-top: 2rem; margin-bottom: 1rem;">O Risco Legal da Marca Anterior</h3>
+      <p class="navalia-text">Anteriormente, havíamos considerado a marca <strong>LÂMINA</strong>. Contudo, a análise aprofundada da base de dados do INPI revelou um gargalo crítico:</p>
+      
+      <div class="navalia-card" style="margin: 1.5rem 0; border-color: var(--accent-danger-border); background: rgba(255, 71, 87, 0.02);">
+        <div class="navalia-badge navalia-badge-danger" style="margin-bottom: 0.75rem;">Impeditivo Identificado no INPI</div>
+        <p class="navalia-text" style="font-size: 0.9rem; margin-bottom: 0;">
+          A empresa <strong>DASA (Diagnósticos da América S/A)</strong> possui o registro da marca nominativa exata "LÂMINA" sob o processo <strong>920050492</strong> na classe **NCL(11) 42** (desenvolvimento de software e serviços de tecnologia). Lançar a plataforma com o nome anterior implicaria em risco de indeferimento de registro ou processos por violação de marca.
+        </p>
+      </div>
+
+      <h3 class="navalia-h4" style="margin-top: 2rem; margin-bottom: 1rem;">A Escolha da Marca: NAVALIA</h3>
+      <p class="navalia-text">
+        Buscamos um termo que mantivesse a conexão física e afiada com a barbearia tradicional (remetendo diretamente a <strong>Navalha</strong>), mas com o sufixo tecnológico <strong>-IA</strong> (referenciando a Inteligência Artificial e a automação que compõem o nosso ecossistema).
+      </p>
+
+      <div class="strategy-grid" style="margin-top: 1.5rem;">
+        <div class="strategy-card">
+          <span class="strategy-metric">Exclusividade do Nome</span>
+          <h4>Busca Limpa no INPI</h4>
+          <p class="navalia-text text-muted" style="font-size: 0.85rem; margin: 0;">A consulta oficial ao INPI (realizada em 23/06/2026) confirmou <strong>zero processos ou registros existentes</strong> para o termo exato "NAVALIA". Isso nos dá caminho livre para depósito de marca mista com viabilidade próxima a 100%.</p>
+        </div>
+        <div class="strategy-card">
+          <span class="strategy-metric">Sinergia Tecnológica</span>
+          <h4>Navalha + Inteligência Artificial</h4>
+          <p class="navalia-text text-muted" style="font-size: 0.85rem; margin: 0;">Preservamos a força e o tom de voz do manifesto: afiar a gestão, cortar a burocracia e entregar uma precisão cirúrgica de corte. Agora, a IA está nativamente embutida no próprio nome da marca.</p>
+        </div>
+      </div>
     </section>
 
     <!-- 3. Origem -->
@@ -400,25 +438,25 @@
         <div class="section-kicker">03 // Estratégico Completo</div>
         <h2 class="section-title">A Origem e Validação Laboratorial</h2>
       </div>
-      <p class="lamina-text">A <strong>LÂMINA</strong> não nasce de suposições corporativas de programadores em uma sala fechada. Ela é a evolução direta da <strong>Alces Barbearia</strong> (Blumenau/SC), um laboratório operacional fundado em 2019 que testou, errou e refinou todos os processos de gestão, atração e recorrência no mundo real.</p>
-      <p class="lamina-text">Não somos apenas mais uma empresa de software de tecnologia genérica; somos uma plataforma feita <strong>por barbeiros, para barbeiros</strong>. Elevamos a barbearia comum a um ecossistema digital premium. Não somos um marketplace que mistura concorrência; entregamos <strong>Tecnologia Dedicada</strong> ("Seu próprio App, sua própria Marca").</p>
+      <p class="navalia-text">A <strong>NAVALIA</strong> não nasce de suposições corporativas de programadores em uma sala fechada. Ela é a evolução direta da <strong>Alces Barbearia</strong> (Blumenau/SC), um laboratório operacional fundado em 2019 que testou, errou e refinou todos os processos de gestão, atração e recorrência no mundo real.</p>
+      <p class="navalia-text">Não somos apenas mais uma empresa de software de tecnologia genérica; somos uma plataforma feita <strong>por barbeiros, para barbeiros</strong>. Elevamos a barbearia comum a um ecossistema digital premium. Não somos um marketplace que mistura concorrência; entregamos <strong>Tecnologia Dedicada</strong> ("Seu próprio App, sua própria Marca").</p>
       
-      <h3 class="lamina-h4" style="margin-top: 2rem; margin-bottom: 1rem;">Os Founders (A Diretoria)</h3>
+      <h3 class="navalia-h4" style="margin-top: 2rem; margin-bottom: 1rem;">Os Founders (A Diretoria)</h3>
       <div class="card-showcase-grid">
-        <div class="lamina-card">
-          <div class="lamina-badge lamina-badge-gold" style="margin-bottom: 0.75rem;">Founder & Business Ops</div>
-          <h4 class="lamina-h4" style="font-size: 1.1rem;">Gabriel Nascimento</h4>
-          <p class="lamina-text text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Empreendedor do setor de beleza masculina, fundador da rede Alces Barbearia. Traz a inteligência operacional de negócios, validação prática no ecossistema de salões e a visão de produto focada na jornada do cliente final (+7 anos de mercado).</p>
+        <div class="navalia-card">
+          <div class="navalia-badge navalia-badge-gold" style="margin-bottom: 0.75rem;">Founder & Business Ops</div>
+          <h4 class="navalia-h4" style="font-size: 1.1rem;">Gabriel Nascimento</h4>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Empreendedor do setor de beleza masculina, fundador da rede Alces Barbearia. Traz a inteligência operacional de negócios, validação prática no ecossistema de salões e a visão de produto focada na jornada do cliente final (+7 anos de mercado).</p>
         </div>
-        <div class="lamina-card">
-          <div class="lamina-badge lamina-badge-primary" style="margin-bottom: 0.75rem;">Tech Founder & CTO</div>
-          <h4 class="lamina-h4" style="font-size: 1.1rem;">Leonardo Pickler</h4>
-          <p class="lamina-text text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Engenheiro de Software Sênior/Staff com mais de 16 anos de experiência (.NET/C#, Next.js, Flutter). Especialista em IA (Agentes LLM) e Web3. Ex-CTO & Co-Founder da Nortech App. Traz maturidade arquitetural e velocidade extrema de entrega.</p>
+        <div class="navalia-card">
+          <div class="navalia-badge navalia-badge-primary" style="margin-bottom: 0.75rem;">Tech Founder & CTO</div>
+          <h4 class="navalia-h4" style="font-size: 1.1rem;">Leonardo Pickler</h4>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Engenheiro de Software Sênior/Staff com mais de 16 anos de experiência (.NET/C#, Next.js, Flutter). Especialista em IA (Agentes LLM) e Web3. Ex-CTO & Co-Founder da Nortech App. Traz maturidade arquitetural e velocidade extrema de entrega.</p>
         </div>
-        <div class="lamina-card">
-          <div class="lamina-badge lamina-badge-neutral" style="margin-bottom: 0.75rem;">Growth & Product Lead</div>
-          <h4 class="lamina-h4" style="font-size: 1.1rem;">Juan Minni</h4>
-          <p class="lamina-text text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">CEO da Starken Tecnologia. +12 anos de marketing digital, performance e UX. Atendeu mais de 100 empresas e gerou R$ 3M+ para negócios locais. O motor que vende e empacota a tecnologia como transformação B2B.</p>
+        <div class="navalia-card">
+          <div class="navalia-badge navalia-badge-neutral" style="margin-bottom: 0.75rem;">Growth & Product Lead</div>
+          <h4 class="navalia-h4" style="font-size: 1.1rem;">Juan Minni</h4>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">CEO da Starken Tecnologia. +12 anos de marketing digital, performance e UX. Atendeu mais de 100 empresas e gerou R$ 3M+ para negócios locais. O motor que vende e empacota a tecnologia como transformação B2B.</p>
         </div>
       </div>
     </section>
@@ -429,28 +467,28 @@
         <div class="section-kicker">03 // Evolução Operacional</div>
         <h2 class="section-title">Storytelling & Linha do Tempo (2019 — 2026)</h2>
       </div>
-      <p class="lamina-text">A história da Alces valida a tese da LÂMINA: <strong>tecnologia dedicada gera fidelidade extrema</strong>.</p>
+      <p class="navalia-text">A história da Alces valida a tese da NAVALIA: <strong>tecnologia dedicada gera fidelidade extrema</strong>.</p>
       
       <div class="timeline-dense">
         <div class="timeline-item-dense">
           <span class="timeline-year-dense">Outubro 2019 (Fundação)</span>
-          <p class="lamina-text" style="margin:0;">O "Fusca vermelho" em Blumenau/SC. Marca forte, descontraída e focada no cliente. Onde aprendemos as dores diárias do atendimento e da cadeira vazia.</p>
+          <p class="navalia-text" style="margin:0;">O "Fusca vermelho" em Blumenau/SC. Marca forte, descontraída e focada no cliente. Onde aprendemos as dores diárias do atendimento e da cadeira vazia.</p>
         </div>
         <div class="timeline-item-dense">
           <span class="timeline-year-dense">Julho 2020 (Pandemia)</span>
-          <p class="lamina-text" style="margin:0;"><strong>Primeiro App Próprio:</strong> Lançado nos primeiros 9 meses. Provou que ter um app próprio (iOS/Android) engajava mais os clientes do que marketplaces genéricos que misturam a concorrência.</p>
+          <p class="navalia-text" style="margin:0;"><strong>Primeiro App Próprio:</strong> Lançado nos primeiros 9 meses. Provou que ter um app próprio (iOS/Android) engajava mais os clientes do que marketplaces genéricos que misturam a concorrência.</p>
         </div>
         <div class="timeline-item-dense">
           <span class="timeline-year-dense">Agosto 2022 (Expansão)</span>
-          <p class="lamina-text" style="margin:0;"><strong>Multi-filial Nativo:</strong> Lançamento da Unidade 2 e validação de rotas de agendamento entre filiais (Itoupava Seca e Escola Agrícola).</p>
+          <p class="navalia-text" style="margin:0;"><strong>Multi-filial Nativo:</strong> Lançamento da Unidade 2 e validação de rotas de agendamento entre filiais (Itoupava Seca e Escola Agrícola).</p>
         </div>
         <div class="timeline-item-dense">
           <span class="timeline-year-dense">Setembro 2023 (A Virada da Recorrência)</span>
-          <p class="lamina-text" style="margin:0;"><strong>Alces Club:</strong> Lançamento do modelo de receita recorrente. Clientes pagando mensalidade via cartão/PIX. Garantiu estabilidade financeira absurda, faturamento previsível e maior frequência de visitas à barbearia.</p>
+          <p class="navalia-text" style="margin:0;"><strong>Alces Club:</strong> Lançamento do modelo de receita recorrente. Clientes pagando mensalidade via cartão/PIX. Garantiu estabilidade financeira absurda, faturamento previsível e maior frequência de visitas à barbearia.</p>
         </div>
         <div class="timeline-item-dense">
           <span class="timeline-year-dense">2026 (Nascimento do SaaS)</span>
-          <p class="lamina-text" style="margin:0;"><strong>Abstração para LÂMINA:</strong> Transformação da estrutura tecnológica monocliente da Alces em um produto SaaS Multi-tenant global (LÂMINA).</p>
+          <p class="navalia-text" style="margin:0;"><strong>Abstração para NAVALIA:</strong> Transformação da estrutura tecnológica monocliente da Alces em um produto SaaS Multi-tenant global (NAVALIA).</p>
         </div>
       </div>
     </section>
@@ -461,41 +499,41 @@
         <div class="section-kicker">04 // A Arquitetura do Produto</div>
         <h2 class="section-title">O Ecossistema Completo (Os 4 Pilares)</h2>
       </div>
-      <p class="lamina-text">A plataforma será composta por 4 grandes pilares interconectados, cobrindo 100% da operação de uma barbearia moderna. A estrutura está sendo modularizada de Monolito para Multi-tenant via Supabase (adicionando a coluna `tenant_id` a todas as tabelas).</p>
+      <p class="navalia-text">A plataforma será composta por 4 grandes pilares interconectados, cobrindo 100% da operação de uma barbearia moderna. A estrutura está sendo modularizada de Monolito para Multi-tenant via Supabase (adicionando a coluna `tenant_id` a todas as tabelas).</p>
 
       <div class="card-showcase-grid" style="grid-template-columns: 1fr 1fr; margin-top: 1.5rem;">
-        <div class="lamina-card lamina-card-primary">
-          <div class="lamina-badge lamina-badge-primary" style="margin-bottom: 0.5rem;">Pilar 1: B2C</div>
-          <h4 class="lamina-h4">App Nativo do Cliente (White-label)</h4>
-          <ul class="lamina-list">
+        <div class="navalia-card navalia-card-primary">
+          <div class="navalia-badge navalia-badge-primary" style="margin-bottom: 0.5rem;">Pilar 1: B2C</div>
+          <h4 class="navalia-h4">App Nativo do Cliente (White-label)</h4>
+          <ul class="navalia-list">
             <li><strong>Agendamento Inteligente:</strong> Multi-filial, escolha de profissional com verificação de conflitos em tempo real.</li>
             <li><strong>Assinaturas e Gateway:</strong> Cobranças automáticas no PIX/Cartão integradas via Asaas nativamente.</li>
             <li><strong>Gamificação Avançada:</strong> Níveis de EXP (Bronze, Prata, Ouro, VIP), Economia de Moedas (Cashback virtual) e Leaderboards.</li>
           </ul>
         </div>
-        <div class="lamina-card">
-          <div class="lamina-badge lamina-badge-neutral" style="margin-bottom: 0.5rem;">Pilar 2: B2E</div>
-          <h4 class="lamina-h4">Área In-App do Barbeiro</h4>
-          <ul class="lamina-list">
+        <div class="navalia-card">
+          <div class="navalia-badge navalia-badge-neutral" style="margin-bottom: 0.5rem;">Pilar 2: B2E</div>
+          <h4 class="navalia-h4">Área In-App do Barbeiro</h4>
+          <ul class="navalia-list">
             <li><strong>Agenda Pessoal:</strong> Visão clara de próximos cortes. Resolve a vida sem precisar de um computador.</li>
             <li><strong>Encaixes Diretos:</strong> Capacidade do barbeiro agendar encaixes diretamente para seus clientes fidelizados.</li>
             <li><strong>Acompanhamento:</strong> Gráficos de metas e comissões do dia/mês atualizadas em tempo real.</li>
           </ul>
         </div>
-        <div class="lamina-card">
-          <div class="lamina-badge lamina-badge-neutral" style="margin-bottom: 0.5rem;">Pilar 3: B2B Core</div>
-          <h4 class="lamina-h4">O Web Admin (Gestão Central)</h4>
-          <ul class="lamina-list">
+        <div class="navalia-card">
+          <div class="navalia-badge navalia-badge-neutral" style="margin-bottom: 0.5rem;">Pilar 3: B2B Core</div>
+          <h4 class="navalia-h4">O Web Admin (Gestão Central)</h4>
+          <ul class="navalia-list">
             <li><strong>Dashboard & Relatórios:</strong> Faturamento, taxa de retorno, ticket médio.</li>
             <li><strong>Caixa (PDV):</strong> Abertura/fechamento e registro de vendas/serviços.</li>
             <li><strong>Financeiro & Comissões:</strong> Cálculo automático das comissões.</li>
             <li><strong>CRM & Estoque:</strong> Histórico de cortes, taxas de cancelamento e alertas de produtos.</li>
           </ul>
         </div>
-        <div class="lamina-card lamina-card-gold">
-          <div class="lamina-badge lamina-badge-gold" style="margin-bottom: 0.5rem;">Pilar 4: Premium Upsell</div>
-          <h4 class="lamina-h4">LÂMINA IA</h4>
-          <ul class="lamina-list">
+        <div class="navalia-card navalia-card-gold">
+          <div class="navalia-badge navalia-badge-gold" style="margin-bottom: 0.5rem;">Pilar 4: Premium Upsell</div>
+          <h4 class="navalia-h4">NAVALIA IA</h4>
+          <ul class="navalia-list">
             <li><strong>Atendente WhatsApp:</strong> Agenda diretamente no sistema conversando de forma natural.</li>
             <li><strong>Assessor Digital Preditivo:</strong> Disparo autônomo (ex: reengajar cliente sumido há 30 dias).</li>
             <li><strong>Base RAG:</strong> Respostas a FAQs e precificações da barbearia treinada em base vetorial.</li>
@@ -510,10 +548,10 @@
         <div class="section-kicker">05 // Segurança e Multi-tenancy</div>
         <h2 class="section-title">Web Admin & Matriz de Permissões RLS</h2>
       </div>
-      <p class="lamina-text">O painel de gestão central é protegido por <strong>Row Level Security (RLS)</strong> no PostgreSQL (Supabase) utilizando a coluna `tenant_id` para isolar rigorosamente os dados das barbearias. Segurança nível SOC 2.</p>
+      <p class="navalia-text">O painel de gestão central é protegido por <strong>Row Level Security (RLS)</strong> no PostgreSQL (Supabase) utilizando a coluna `tenant_id` para isolar rigorosamente os dados das barbearias. Segurança nível SOC 2.</p>
       
       <div style="overflow-x: auto;">
-        <table class="lamina-table-dense">
+        <table class="navalia-table-dense">
           <thead>
             <tr>
               <th>Perfil (Role)</th>
@@ -522,8 +560,8 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong class="text-primary">🔧 Super Admin (LÂMINA)</strong></td>
-              <td>Administrador global da plataforma LÂMINA. Visão de todas as barbearias, gestão de faturamento das taxas (LÂMINA Pay), alteração de identidade visual global e domínios whitelabel dinâmicos.</td>
+              <td><strong class="text-primary">🔧 Super Admin (NAVALIA)</strong></td>
+              <td>Administrador global da plataforma NAVALIA. Visão de todas as barbearias, gestão de faturamento das taxas (NAVALIA Pay), alteração de identidade visual global e domínios whitelabel dinâmicos.</td>
             </tr>
             <tr>
               <td><strong class="text-gold">👑 Owner (Dono da Barbearia)</strong></td>
@@ -539,7 +577,7 @@
             </tr>
             <tr>
               <td><strong class="text-pure">✂️ Barber (Profissional)</strong></td>
-              <td>A visão mais restrita. O barbeiro acessa via app sua própria agenda, métricas de comissão diária do LÂMINA Pay, e encaixes para *seus* clientes.</td>
+              <td>A visão mais restrita. O barbeiro acessa via app sua própria agenda, métricas de comissão diária do NAVALIA Pay, e encaixes para *seus* clientes.</td>
             </tr>
           </tbody>
         </table>
@@ -547,65 +585,65 @@
     </section>
 
     <!-- 6. Fintech Motor -->
-    <section id="laminapay" class="ds-section">
+    <section id="navaliapay" class="ds-section">
       <div class="section-header">
         <div class="section-kicker">06 // O Caminho Bilionário</div>
-        <h2 class="section-title">LÂMINA Pay: O Motor Fintech</h2>
+        <h2 class="section-title">NAVALIA Pay: O Motor Fintech</h2>
       </div>
-      <p class="lamina-text">Um SaaS puro limita a receita à mensalidade. A LÂMINA rompe essa bolha posicionando-se como <strong>Sub-Adquirente (Fintech)</strong> via API White Label do Banco Asaas. Nós monetizamos a operação transacional das barbearias sem nenhum esforço burocrático para elas.</p>
+      <p class="navalia-text">Um SaaS puro limita a receita à mensalidade. A NAVALIA rompe essa bolha posicionando-se como <strong>Sub-Adquirente (Fintech)</strong> via API White Label do Banco Asaas. Nós monetizamos a operação transacional das barbearias sem nenhum esforço burocrático para elas.</p>
 
-      <div class="lamina-manifesto" style="padding: 1.5rem; margin: 1.5rem 0; background: var(--bg-elevated); box-shadow: none; border-radius: var(--radius-md);">
-        <p class="lamina-text" style="font-family: var(--font-display); font-size: 1.25rem; color: var(--text-pure); margin: 0; font-weight: 500;">
-          "Onboarding Frictionless. O dono da barbearia digita apenas o CNPJ. A LÂMINA Pay cria a conta bancária dele em background via integração Sub-contas Asaas e já começamos a processar pagamentos. Zero configuração técnica com chaves de API."
+      <div class="navalia-manifesto" style="padding: 1.5rem; margin: 1.5rem 0; background: var(--bg-elevated); box-shadow: none; border-radius: var(--radius-md);">
+        <p class="navalia-text" style="font-family: var(--font-display); font-size: 1.25rem; color: var(--text-pure); margin: 0; font-weight: 500;">
+          "Onboarding Frictionless. O dono da barbearia digita apenas o CNPJ. A NAVALIA Pay cria a conta bancária dele em background via integração Sub-contas Asaas e já começamos a processar pagamentos. Zero configuração técnica com chaves de API."
         </p>
       </div>
 
       <div class="card-showcase-grid" style="grid-template-columns: 1fr 1fr;">
-        <div class="lamina-card lamina-card-primary">
-          <h4 class="lamina-h4">Receita Infinita Exponencial (Take Rate)</h4>
-          <p class="lamina-text text-muted" style="margin-top: 0.5rem;">Se negociarmos PIX a R$ 0,99 de custo de infraestrutura Asaas, a LÂMINA Pay cobra R$ 1,99 da barbearia. Retemos <strong>R$ 1,00 de lucro limpo por cada corte agendado</strong> via App. Escalabilidade absurda além da assinatura mensal de software.</p>
+        <div class="navalia-card navalia-card-primary">
+          <h4 class="navalia-h4">Receita Infinita Exponencial (Take Rate)</h4>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem;">Se negociarmos PIX a R$ 0,99 de custo de infraestrutura Asaas, a NAVALIA Pay cobra R$ 1,99 da barbearia. Retemos <strong>R$ 1,00 de lucro limpo por cada corte agendado</strong> via App. Escalabilidade absurda além da assinatura mensal de software.</p>
         </div>
-        <div class="lamina-card lamina-card-gold">
-          <h4 class="lamina-h4">Split Automático de Pagamentos</h4>
-          <p class="lamina-text text-muted" style="margin-top: 0.5rem;">Cliente paga R$ 100 via LÂMINA Pay. Nossa API injeta a regra de negócio financeira: R$ 50 vai direto automático para a conta bancária do barbeiro que atendeu, R$ 50 para o dono da barbearia. Fim do fechamento de caixa manual.</p>
+        <div class="navalia-card navalia-card-gold">
+          <h4 class="navalia-h4">Split Automático de Pagamentos</h4>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem;">Cliente paga R$ 100 via NAVALIA Pay. Nossa API injeta a regra de negócio financeira: R$ 50 vai direto automático para a conta bancária do barbeiro que atendeu, R$ 50 para o dono da barbearia. Fim do fechamento de caixa manual.</p>
         </div>
       </div>
-      <div class="lamina-card" style="margin-top: 1.5rem; border-color: var(--accent-gold-border);">
-        <div class="lamina-badge lamina-badge-gold" style="margin-bottom: 0.75rem;">Analise para decisao</div>
-        <h4 class="lamina-h4" style="margin-top:0;">Asaas do cliente vs. LAMINA Pay</h4>
-        <p class="lamina-text text-muted">Ainda nao precisa ser uma decisao fechada, mas os fluxos favorecem fortemente a tese do LAMINA Pay. O modelo inicial, em que o cliente cria a propria conta Asaas e fornece a API key/webhook, e mais rapido para validar tecnicamente. Porem, ele cria atrito no onboarding, aumenta risco operacional e limita a captura de receita transacional. O LAMINA Pay exige mais arquitetura e cuidado, mas entrega uma experiencia mais simples para o cliente e abre uma escala de faturamento muito mais agressiva.</p>
+      <div class="navalia-card" style="margin-top: 1.5rem; border-color: var(--accent-gold-border);">
+        <div class="navalia-badge navalia-badge-gold" style="margin-bottom: 0.75rem;">Analise para decisao</div>
+        <h4 class="navalia-h4" style="margin-top:0;">Asaas do cliente vs. NAVALIA Pay</h4>
+        <p class="navalia-text text-muted">Ainda nao precisa ser uma decisao fechada, mas os fluxos favorecem fortemente a tese do NAVALIA Pay. O modelo inicial, em que o cliente cria a propria conta Asaas e fornece a API key/webhook, e mais rapido para validar tecnicamente. Porem, ele cria atrito no onboarding, aumenta risco operacional e limita a captura de receita transacional. O NAVALIA Pay exige mais arquitetura e cuidado, mas entrega uma experiencia mais simples para o cliente e abre uma escala de faturamento muito mais agressiva.</p>
 
         <div class="strategy-grid" style="margin-top: 1rem;">
           <div class="strategy-card">
             <span class="strategy-metric">Opcao A</span>
-            <h4 class="lamina-h4">Cliente cria a conta Asaas</h4>
-            <p class="lamina-text text-muted" style="margin:0;">A barbearia cria a conta, valida documentos, configura dados bancarios, gera API key e informa a LAMINA. O sistema conecta essa conta ao tenant, cria cobrancas e escuta eventos via webhook. E uma ponte valida para piloto, mas depende de acao tecnica do cliente.</p>
+            <h4 class="navalia-h4">Cliente cria a conta Asaas</h4>
+            <p class="navalia-text text-muted" style="margin:0;">A barbearia cria a conta, valida documentos, configura dados bancarios, gera API key e informa a NAVALIA. O sistema conecta essa conta ao tenant, cria cobrancas e escuta eventos via webhook. E uma ponte valida para piloto, mas depende de acao tecnica do cliente.</p>
           </div>
           <div class="strategy-card">
             <span class="strategy-metric">Opcao B</span>
-            <h4 class="lamina-h4">LAMINA Pay como camada propria</h4>
-            <p class="lamina-text text-muted" style="margin:0;">A LAMINA abstrai a complexidade financeira: cria ou gerencia subcontas, padroniza webhooks, aplica regras de split/take rate e entrega ao cliente uma implantacao guiada. A barbearia deixa de mexer em chaves, endpoints e configuracoes sensiveis.</p>
+            <h4 class="navalia-h4">NAVALIA Pay como camada propria</h4>
+            <p class="navalia-text text-muted" style="margin:0;">A NAVALIA abstrai a complexidade financeira: cria ou gerencia subcontas, padroniza webhooks, aplica regras de split/take rate e entrega ao cliente uma implantacao guiada. A barbearia deixa de mexer em chaves, endpoints e configuracoes sensiveis.</p>
           </div>
           <div class="strategy-card">
             <span class="strategy-metric">Sinal comercial</span>
-            <h4 class="lamina-h4">Menos friccao aumenta conversao</h4>
-            <p class="lamina-text text-muted" style="margin:0;">Quanto mais passos tecnicos o dono da barbearia precisa executar, maior o risco de travar a venda. Se a promessa e tecnologia dedicada sem dor, o pagamento tambem precisa parecer plug-and-play.</p>
+            <h4 class="navalia-h4">Menos friccao aumenta conversao</h4>
+            <p class="navalia-text text-muted" style="margin:0;">Quanto mais passos tecnicos o dono da barbearia precisa executar, maior o risco de travar a venda. Se a promessa e tecnologia dedicada sem dor, o pagamento tambem precisa parecer plug-and-play.</p>
           </div>
           <div class="strategy-card">
             <span class="strategy-metric">Sinal financeiro</span>
-            <h4 class="lamina-h4">A receita deixa de ser so mensalidade</h4>
-            <p class="lamina-text text-muted" style="margin:0;">Com LAMINA Pay, cada transacao vira potencial de monetizacao: taxa Pix/cartao, take rate, split, assinatura recorrente, repasse de barbeiro e fechamento de caixa. Isso cria uma curva de faturamento mais agressiva que SaaS puro.</p>
+            <h4 class="navalia-h4">A receita deixa de ser so mensalidade</h4>
+            <p class="navalia-text text-muted" style="margin:0;">Com NAVALIA Pay, cada transacao vira potencial de monetizacao: taxa Pix/cartao, take rate, split, assinatura recorrente, repasse de barbeiro e fechamento de caixa. Isso cria uma curva de faturamento mais agressiva que SaaS puro.</p>
           </div>
         </div>
 
-        <h4 class="lamina-h4" style="margin-top: 1.5rem;">Comparativo de fluxo operacional</h4>
+        <h4 class="navalia-h4" style="margin-top: 1.5rem;">Comparativo de fluxo operacional</h4>
         <div style="overflow-x:auto; margin-top: 0.75rem;">
-          <table class="lamina-table-dense">
+          <table class="navalia-table-dense">
             <thead>
-              <tr><th>Critério</th><th>Asaas do cliente</th><th>LAMINA Pay</th></tr>
+              <tr><th>Critério</th><th>Asaas do cliente</th><th>NAVALIA Pay</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>Onboarding</strong></td><td>Cliente precisa criar conta, configurar chave e liberar acesso.</td><td>Cliente informa dados básicos; a LAMINA conduz a ativacao financeira.</td></tr>
+              <tr><td><strong>Onboarding</strong></td><td>Cliente precisa criar conta, configurar chave e liberar acesso.</td><td>Cliente informa dados básicos; a NAVALIA conduz a ativacao financeira.</td></tr>
               <tr><td><strong>Suporte</strong></td><td>Mais chamados sobre API key, webhook, permissao e configuracao.</td><td>Menos variacao operacional, pois o fluxo fica padronizado.</td></tr>
               <tr><td><strong>Escala</strong></td><td>Cada cliente vira uma integracao quase artesanal.</td><td>Modelo replicavel para centenas de barbearias com a mesma arquitetura.</td></tr>
               <tr><td><strong>Receita</strong></td><td>Principalmente mensalidade e setup.</td><td>Mensalidade + setup + margem transacional + produtos financeiros futuros.</td></tr>
@@ -615,13 +653,13 @@
           </table>
         </div>
 
-        <h4 class="lamina-h4" style="margin-top: 1.5rem;">Recomendacao para apresentar aos socios</h4>
-        <ul class="lamina-list" style="margin-bottom:0;">
+        <h4 class="navalia-h4" style="margin-top: 1.5rem;">Recomendacao para apresentar aos socios</h4>
+        <ul class="navalia-list" style="margin-bottom:0;">
           <li><strong>Nao descartar a integracao direta:</strong> usar o modelo "Asaas do cliente" como caminho de piloto, contingencia ou fase de aprendizado.</li>
-          <li><strong>Priorizar arquitetura para LAMINA Pay:</strong> desde o inicio, criar uma camada PaymentProvider para permitir migrar sem reescrever app, agenda ou painel.</li>
+          <li><strong>Priorizar arquitetura para NAVALIA Pay:</strong> desde o inicio, criar uma camada PaymentProvider para permitir migrar sem reescrever app, agenda ou painel.</li>
           <li><strong>Validar com poucos clientes:</strong> medir tempo de ativacao, quantidade de chamados, pagamentos processados, falhas de webhook e adesao ao pagamento integrado.</li>
-          <li><strong>Decidir por dados:</strong> se o fluxo manual gerar atrito, suporte alto ou perda de venda, isso reforca a virada para LAMINA Pay como produto central.</li>
-          <li><strong>Tese atual:</strong> analisando escala, receita e simplicidade de implantacao, LAMINA Pay parece o caminho mais forte, mas deve ser apresentado como decisao estrategica baseada em fluxo e validacao.</li>
+          <li><strong>Decidir por dados:</strong> se o fluxo manual gerar atrito, suporte alto ou perda de venda, isso reforca a virada para NAVALIA Pay como produto central.</li>
+          <li><strong>Tese atual:</strong> analisando escala, receita e simplicidade de implantacao, NAVALIA Pay parece o caminho mais forte, mas deve ser apresentado como decisao estrategica baseada em fluxo e validacao.</li>
         </ul>
       </div>
     </section>
@@ -632,11 +670,11 @@
         <div class="section-kicker">07 // Engenharia Automática</div>
         <h2 class="section-title">Fábrica de Apps (CI/CD Whitelabel)</h2>
       </div>
-      <p class="lamina-text">Como a LÂMINA vai entregar 1.000 aplicativos nativos nas lojas Apple Store e Google Play sem contratar 50 programadores para fazer os builds de forma manual?</p>
+      <p class="navalia-text">Como a NAVALIA vai entregar 1.000 aplicativos nativos nas lojas Apple Store e Google Play sem contratar 50 programadores para fazer os builds de forma manual?</p>
       
-      <div class="lamina-card" style="margin-top: 1rem; border-color: var(--accent-primary-border);">
-        <h4 class="lamina-h4 text-primary">Pipeline Fastlane + GitHub Actions</h4>
-        <ul class="lamina-list" style="margin-top: 1rem;">
+      <div class="navalia-card" style="margin-top: 1rem; border-color: var(--accent-primary-border);">
+        <h4 class="navalia-h4 text-primary">Pipeline Fastlane + GitHub Actions</h4>
+        <ul class="navalia-list" style="margin-top: 1rem;">
           <li>1. <strong>Parametrização Web:</strong> O dono da barbearia faz upload do seu logo no Web Admin e escolhe sua paleta de cores (consumindo um JSON dinâmico baseado no Design System).</li>
           <li>2. <strong>Trigger Webhook:</strong> Um webhook dispara uma rotina autônoma em um servidor Cloud (ex: Mac M1 via GitHub Actions).</li>
           <li>3. <strong>Injeção Multi-tenant:</strong> O script injeta o `tenant_id` diretamente no código-fonte base em Flutter.</li>
@@ -646,27 +684,27 @@
       </div>
     </section>
 
-    <!-- 8. LÂMINA IA -->
+    <!-- 8. NAVALIA IA -->
     <section id="ia" class="ds-section">
       <div class="section-header">
         <div class="section-kicker">08 // O Módulo Premium</div>
-        <h2 class="section-title">Cérebro LÂMINA IA e Cockpit</h2>
+        <h2 class="section-title">Cérebro NAVALIA IA e Cockpit</h2>
       </div>
-      <p class="lamina-text">Não usamos "árvore de decisão" engessada. Usamos LLMs avançados conectados a um <strong>RAG (Retrieval-Augmented Generation)</strong> em tempo real com o banco de dados da barbearia (pgvector).</p>
+      <p class="navalia-text">Não usamos "árvore de decisão" engessada. Usamos LLMs avançados conectados a um <strong>RAG (Retrieval-Augmented Generation)</strong> em tempo real com o banco de dados da barbearia (pgvector).</p>
       
       <div class="card-showcase-grid">
-        <div class="lamina-card lamina-card-gold">
-          <div class="lamina-badge lamina-badge-gold" style="margin-bottom: 0.5rem;">Base RAG (Vector DB)</div>
-          <h4 class="lamina-h4">Conhecimento Profundo</h4>
-          <p class="lamina-text text-muted" style="margin-top: 0.5rem;">A IA é treinada com os preços, horários de pico e serviços de *cada* barbearia. A base assimila regras operacionais cadastradas no Cockpit Administrativo. Ela sabe, por exemplo, se o barbeiro "Lucas" costuma atrasar e agenda com folga, respeitando a tolerância configurada.</p>
+        <div class="navalia-card navalia-card-gold">
+          <div class="navalia-badge navalia-badge-gold" style="margin-bottom: 0.5rem;">Base RAG (Vector DB)</div>
+          <h4 class="navalia-h4">Conhecimento Profundo</h4>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem;">A IA é treinada com os preços, horários de pico e serviços de *cada* barbearia. A base assimila regras operacionais cadastradas no Cockpit Administrativo. Ela sabe, por exemplo, se o barbeiro "Lucas" costuma atrasar e agenda com folga, respeitando a tolerância configurada.</p>
         </div>
-        <div class="lamina-card lamina-card-primary">
-          <div class="lamina-badge lamina-badge-primary" style="margin-bottom: 0.5rem;">Anti-Alucinação</div>
-          <h4 class="lamina-h4">Handoff Silencioso</h4>
-          <p class="lamina-text text-muted" style="margin-top: 0.5rem;">A IA atua via Inbox/WhatsApp. Se ela não atingir um 'Score IA' de 95% de intenção clara, ela pausa o agente autônomo e aciona um Handoff: envia notificação ao Web Admin avisando "O Humano precisa assumir". O cliente não percebe a transição.</p>
+        <div class="navalia-card navalia-card-primary">
+          <div class="navalia-badge navalia-badge-primary" style="margin-bottom: 0.5rem;">Anti-Alucinação</div>
+          <h4 class="navalia-h4">Handoff Silencioso</h4>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem;">A IA atua via Inbox/WhatsApp. Se ela não atingir um 'Score IA' de 95% de intenção clara, ela pausa o agente autônomo e aciona um Handoff: envia notificação ao Web Admin avisando "O Humano precisa assumir". O cliente não percebe a transição.</p>
         </div>
       </div>
-      <p class="lamina-text" style="margin-top: 1rem;">O <strong>Console IA (Cockpit)</strong>, modelado em Vanilla JS com o Obsidian Steel theme, trará um "Inbox Simulator", Métricas Preditivas (Assessor IA detectando ociosidades e sugerindo disparos automáticos) e controles granulares de "Ajuste de Tom/Persona".</p>
+      <p class="navalia-text" style="margin-top: 1rem;">O <strong>Console IA (Cockpit)</strong>, modelado em Vanilla JS com o Obsidian Steel theme, trará um "Inbox Simulator", Métricas Preditivas (Assessor IA detectando ociosidades e sugerindo disparos automáticos) e controles granulares de "Ajuste de Tom/Persona".</p>
     </section>
 
     <!-- 9. Gamificação -->
@@ -675,8 +713,8 @@
         <div class="section-kicker">09 // Retenção e Economia</div>
         <h2 class="section-title">A Matemática da Gamificação</h2>
       </div>
-      <p class="lamina-text">Sistemas de recompensas falhos geram prejuízo na margem de lucro. A LÂMINA abstraiu o "Caminho do Alce" para um motor genérico e rigoroso, controlando a inflação das recompensas para garantir que a barbearia lucre com a retenção a longo prazo.</p>
-      <ul class="lamina-list">
+      <p class="navalia-text">Sistemas de recompensas falhos geram prejuízo na margem de lucro. A NAVALIA abstraiu o "Caminho do Alce" para um motor genérico e rigoroso, controlando a inflação das recompensas para garantir que a barbearia lucre com a retenção a longo prazo.</p>
+      <ul class="navalia-list">
         <li><strong>Burn Mechanism (Expiração):</strong> XP (Pontos de Nível) e Coins (Moeda Virtual) vencem a cada 90 dias sem retorno à barbearia, forçando um ciclo de recorrência acelerado para evitar perda de saldo.</li>
         <li><strong>Lock-in de Custo:</strong> Atingir o nível Ouro, por exemplo, exige o consumo equivalente a 20 cortes no app (gerando LTV alto), e só então libera um brinde com custo fixo e margem líquida muito baixa para a barbearia (ex: Pomada que custa R$ 15).</li>
       </ul>
@@ -689,7 +727,7 @@
         <h2 class="section-title">Mercado Global e Concorrentes</h2>
       </div>
       <div style="overflow-x: auto; margin-bottom: 1.5rem;">
-        <table class="lamina-table-dense">
+        <table class="navalia-table-dense">
           <thead>
             <tr>
               <th>Plataforma Concorrente</th>
@@ -707,8 +745,8 @@
           </tbody>
         </table>
       </div>
-      <h3 class="lamina-h4">Gaps de Mercado e Nossas Oportunidades</h3>
-      <ul class="lamina-list">
+      <h3 class="navalia-h4">Gaps de Mercado e Nossas Oportunidades</h3>
+      <ul class="navalia-list">
         <li><strong>App nativo REAL com a marca:</strong> Maioria entrega apps genéricos ("powered by").</li>
         <li><strong>IA Generativa:</strong> Chatbots concorrentes são de fluxo fixo. O nosso usa LLMs com RAG.</li>
         <li><strong>Assessor digital B2B:</strong> Nenhum concorrente foca em insights proativos (detecção de no-shows).</li>
@@ -722,29 +760,29 @@
         <div class="section-kicker">11 // Go-To-Market & Financeiro</div>
         <h2 class="section-title">Precificação B2B SaaS</h2>
       </div>
-      <p class="lamina-text">Venderemos uma <strong>Transformação Digital</strong> completa. Foco implacável no Ideal Customer Profile (ICP): Barbearias Tier 1 e Tier 2 (+3 cadeiras e faturamento > R$ 50k). Negócios pequenos não suportariam o nosso setup alto e qualidade da tecnologia.</p>
+      <p class="navalia-text">Venderemos uma <strong>Transformação Digital</strong> completa. Foco implacável no Ideal Customer Profile (ICP): Barbearias Tier 1 e Tier 2 (+3 cadeiras e faturamento > R$ 50k). Negócios pequenos não suportariam o nosso setup alto e qualidade da tecnologia.</p>
       
       <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
-        <div class="lamina-card" style="padding: 1rem 1.5rem;">
+        <div class="navalia-card" style="padding: 1rem 1.5rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <h4 class="lamina-h4 text-primary" style="font-size: 1.1rem;">Essencial</h4>
-            <span class="lamina-mono text-primary" style="font-size: 0.8rem;">R$ 197 / mês + Setup R$ 2.500</span>
+            <h4 class="navalia-h4 text-primary" style="font-size: 1.1rem;">Essencial</h4>
+            <span class="navalia-mono text-primary" style="font-size: 0.8rem;">R$ 197 / mês + Setup R$ 2.500</span>
           </div>
-          <p class="lamina-text text-muted" style="margin: 0; font-size: 0.85rem;">Web Admin Central + App Cliente Publicado nas Lojas Apple/Google + Gamificação Base.</p>
+          <p class="navalia-text text-muted" style="margin: 0; font-size: 0.85rem;">Web Admin Central + App Cliente Publicado nas Lojas Apple/Google + Gamificação Base.</p>
         </div>
-        <div class="lamina-card" style="padding: 1rem 1.5rem;">
+        <div class="navalia-card" style="padding: 1rem 1.5rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <h4 class="lamina-h4 text-gold" style="font-size: 1.1rem;">Pro (O Foco da Venda)</h4>
-            <span class="lamina-mono text-gold" style="font-size: 0.8rem;">R$ 347 / mês + Setup R$ 4.000</span>
+            <h4 class="navalia-h4 text-gold" style="font-size: 1.1rem;">Pro (O Foco da Venda)</h4>
+            <span class="navalia-mono text-gold" style="font-size: 0.8rem;">R$ 347 / mês + Setup R$ 4.000</span>
           </div>
-          <p class="lamina-text text-muted" style="margin: 0; font-size: 0.85rem;">Essencial + LÂMINA Pay Automático (Split Asaas) + Clube de Assinatura Recorrente + Metas Financeiras e Analytics Avançado.</p>
+          <p class="navalia-text text-muted" style="margin: 0; font-size: 0.85rem;">Essencial + NAVALIA Pay Automático (Split Asaas) + Clube de Assinatura Recorrente + Metas Financeiras e Analytics Avançado.</p>
         </div>
-        <div class="lamina-card lamina-card-glass" style="padding: 1rem 1.5rem; border-color: var(--accent-primary);">
+        <div class="navalia-card navalia-card-glass" style="padding: 1rem 1.5rem; border-color: var(--accent-primary);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <h4 class="lamina-h4 text-pure" style="font-size: 1.1rem;">Plus (Módulo IA)</h4>
-            <span class="lamina-mono text-pure" style="font-size: 0.8rem;">R$ 597+ / mês + Tokens + Setup R$ 6.000</span>
+            <h4 class="navalia-h4 text-pure" style="font-size: 1.1rem;">Plus (Módulo IA)</h4>
+            <span class="navalia-mono text-pure" style="font-size: 0.8rem;">R$ 597+ / mês + Tokens + Setup R$ 6.000</span>
           </div>
-          <p class="lamina-text text-muted" style="margin: 0; font-size: 0.85rem;">Pro + Atendente LÂMINA IA no WhatsApp + Assessor Preditivo Dashboard + Integração Oficial WABA (WhatsApp API).</p>
+          <p class="navalia-text text-muted" style="margin: 0; font-size: 0.85rem;">Pro + Atendente NAVALIA IA no WhatsApp + Assessor Preditivo Dashboard + Integração Oficial WABA (WhatsApp API).</p>
         </div>
       </div>
     </section>
@@ -761,37 +799,37 @@
       <div class="strategy-grid">
         <div class="strategy-card">
           <span class="strategy-metric">Diagn&oacute;stico</span>
-          <h4 class="lamina-h4">O site vende bem a vis&atilde;o, mas pode vender melhor a ordem de execu&ccedil;&atilde;o.</h4>
-          <p class="lamina-text text-muted" style="margin:0;">Hoje a narrativa mostra ambi&ccedil;&atilde;o, tecnologia e marca. A melhoria &eacute; transformar isso em leitura de investidor e operador: prioridade, prova, risco e pr&oacute;xima entrega.</p>
+          <h4 class="navalia-h4">O site vende bem a vis&atilde;o, mas pode vender melhor a ordem de execu&ccedil;&atilde;o.</h4>
+          <p class="navalia-text text-muted" style="margin:0;">Hoje a narrativa mostra ambi&ccedil;&atilde;o, tecnologia e marca. A melhoria &eacute; transformar isso em leitura de investidor e operador: prioridade, prova, risco e pr&oacute;xima entrega.</p>
         </div>
         <div class="strategy-card">
           <span class="strategy-metric">Foco comercial</span>
-          <h4 class="lamina-h4">O produto inicial deve ser vendido como transforma&ccedil;&atilde;o operacional, n&atilde;o como lista de features.</h4>
-          <p class="lamina-text text-muted" style="margin:0;">A oferta mais forte &eacute;: app com marca pr&oacute;pria + agenda central + recorr&ecirc;ncia + pagamentos. IA entra como expans&atilde;o premium quando o cliente j&aacute; percebe valor no fluxo base.</p>
+          <h4 class="navalia-h4">O produto inicial deve ser vendido como transforma&ccedil;&atilde;o operacional, n&atilde;o como lista de features.</h4>
+          <p class="navalia-text text-muted" style="margin:0;">A oferta mais forte &eacute;: app com marca pr&oacute;pria + agenda central + recorr&ecirc;ncia + pagamentos. IA entra como expans&atilde;o premium quando o cliente j&aacute; percebe valor no fluxo base.</p>
         </div>
         <div class="strategy-card">
           <span class="strategy-metric">MVP recomendado</span>
-          <h4 class="lamina-h4">Come&ccedil;ar pelo ciclo agenda, cliente, pagamento e painel.</h4>
-          <p class="lamina-text text-muted" style="margin:0;">MVP enxuto: multi-tenant, cadastro da barbearia, agenda, app cliente, painel do dono, cobran&ccedil;a recorrente e relat&oacute;rio simples. Gamifica&ccedil;&atilde;o e IA entram depois de medir ades&atilde;o.</p>
+          <h4 class="navalia-h4">Come&ccedil;ar pelo ciclo agenda, cliente, pagamento e painel.</h4>
+          <p class="navalia-text text-muted" style="margin:0;">MVP enxuto: multi-tenant, cadastro da barbearia, agenda, app cliente, painel do dono, cobran&ccedil;a recorrente e relat&oacute;rio simples. Gamifica&ccedil;&atilde;o e IA entram depois de medir ades&atilde;o.</p>
         </div>
         <div class="strategy-card">
           <span class="strategy-metric">Risco principal</span>
-          <h4 class="lamina-h4">Complexidade antes de valida&ccedil;&atilde;o pode atrasar receita.</h4>
-          <p class="lamina-text text-muted" style="margin:0;">O maior cuidado &eacute; n&atilde;o tentar entregar fintech, app, RAG, gamifica&ccedil;&atilde;o e whitelabel completo no mesmo primeiro pacote. A vers&atilde;o 1 precisa provar venda e reten&ccedil;&atilde;o.</p>
+          <h4 class="navalia-h4">Complexidade antes de valida&ccedil;&atilde;o pode atrasar receita.</h4>
+          <p class="navalia-text text-muted" style="margin:0;">O maior cuidado &eacute; n&atilde;o tentar entregar fintech, app, RAG, gamifica&ccedil;&atilde;o e whitelabel completo no mesmo primeiro pacote. A vers&atilde;o 1 precisa provar venda e reten&ccedil;&atilde;o.</p>
         </div>
       </div>
 
-      <h3 class="lamina-h4" style="margin-top: 2rem;">Roadmap recomendado</h3>
+      <h3 class="navalia-h4" style="margin-top: 2rem;">Roadmap recomendado</h3>
       <div class="strategy-roadmap">
-        <div class="strategy-step"><span>0-30 dias</span><strong>Valida&ccedil;&atilde;o de oferta</strong><p class="lamina-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Landing comercial, demo clic&aacute;vel, pitch de setup e 10 conversas com barbearias ICP.</p></div>
-        <div class="strategy-step"><span>31-60 dias</span><strong>MVP operacional</strong><p class="lamina-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Agenda, cliente, painel, tenant_id, permiss&otilde;es, pagamentos b&aacute;sicos e primeira barbearia piloto.</p></div>
-        <div class="strategy-step"><span>61-90 dias</span><strong>Reten&ccedil;&atilde;o e receita</strong><p class="lamina-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Clube recorrente, relat&oacute;rios, comiss&otilde;es, no-show e acompanhamento semanal de uso.</p></div>
-        <div class="strategy-step"><span>90+ dias</span><strong>Escala premium</strong><p class="lamina-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Split Asaas, IA WhatsApp, RAG, whitelabel automatizado e playbook de venda B2B.</p></div>
+        <div class="strategy-step"><span>0-30 dias</span><strong>Valida&ccedil;&atilde;o de oferta</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Landing comercial, demo clic&aacute;vel, pitch de setup e 10 conversas com barbearias ICP.</p></div>
+        <div class="strategy-step"><span>31-60 dias</span><strong>MVP operacional</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Agenda, cliente, painel, tenant_id, permiss&otilde;es, pagamentos b&aacute;sicos e primeira barbearia piloto.</p></div>
+        <div class="strategy-step"><span>61-90 dias</span><strong>Reten&ccedil;&atilde;o e receita</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Clube recorrente, relat&oacute;rios, comiss&otilde;es, no-show e acompanhamento semanal de uso.</p></div>
+        <div class="strategy-step"><span>90+ dias</span><strong>Escala premium</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Split Asaas, IA WhatsApp, RAG, whitelabel automatizado e playbook de venda B2B.</p></div>
       </div>
 
-      <div class="lamina-card lamina-card-primary" style="margin-top: 1.5rem;">
-        <h4 class="lamina-h4" style="margin-top:0;">M&eacute;tricas que devem guiar a pr&oacute;xima vers&atilde;o</h4>
-        <ul class="lamina-list" style="margin-bottom:0;">
+      <div class="navalia-card navalia-card-primary" style="margin-top: 1.5rem;">
+        <h4 class="navalia-h4" style="margin-top:0;">M&eacute;tricas que devem guiar a pr&oacute;xima vers&atilde;o</h4>
+        <ul class="navalia-list" style="margin-bottom:0;">
           <li><strong>Ativa&ccedil;&atilde;o:</strong> primeira barbearia com agenda publicada, profissionais cadastrados e clientes ativos.</li>
           <li><strong>Uso:</strong> agendamentos via app por semana, taxa de retorno e redu&ccedil;&atilde;o de mensagens manuais no WhatsApp.</li>
           <li><strong>Receita:</strong> MRR por barbearia, setup recebido, take rate potencial e ades&atilde;o ao clube recorrente.</li>
@@ -888,16 +926,16 @@
       </div>
       <div class="component-board">
         <div class="btn-showcase">
-          <button class="lamina-btn lamina-btn-primary">Contratar Agora</button>
-          <button class="lamina-btn lamina-btn-gold">Plano Premium</button>
-          <button class="lamina-btn lamina-btn-secondary">Ver Demo</button>
-          <button class="lamina-btn lamina-btn-ghost">Saiba Mais</button>
+          <button class="navalia-btn navalia-btn-primary">Contratar Agora</button>
+          <button class="navalia-btn navalia-btn-gold">Plano Premium</button>
+          <button class="navalia-btn navalia-btn-secondary">Ver Demo</button>
+          <button class="navalia-btn navalia-btn-ghost">Saiba Mais</button>
         </div>
         <div class="btn-showcase" style="margin-bottom: 0;">
-          <button class="lamina-btn lamina-btn-primary lamina-btn-sm">Pequeno</button>
-          <button class="lamina-btn lamina-btn-primary">Padrão</button>
-          <button class="lamina-btn lamina-btn-primary lamina-btn-lg">Grande</button>
-          <button class="lamina-btn lamina-btn-primary" disabled>Desabilitado</button>
+          <button class="navalia-btn navalia-btn-primary navalia-btn-sm">Pequeno</button>
+          <button class="navalia-btn navalia-btn-primary">Padrão</button>
+          <button class="navalia-btn navalia-btn-primary navalia-btn-lg">Grande</button>
+          <button class="navalia-btn navalia-btn-primary" disabled>Desabilitado</button>
         </div>
       </div>
     </section>
@@ -909,14 +947,14 @@
         <h2 class="section-title">Cards e Containments</h2>
       </div>
       <div class="card-showcase-grid">
-        <div class="lamina-card lamina-card-primary">
-          <div class="lamina-badge lamina-badge-primary" style="margin-bottom: 0.75rem;">Essencial</div>
-          <h4 class="lamina-h4" style="font-size:1.1rem;">App com sua marca</h4>
+        <div class="navalia-card navalia-card-primary">
+          <div class="navalia-badge navalia-badge-primary" style="margin-bottom: 0.75rem;">Essencial</div>
+          <h4 class="navalia-h4" style="font-size:1.1rem;">App com sua marca</h4>
           <p class="text-muted" style="margin-top: 0.5rem; font-size: 0.85rem; line-height: 1.5;">Aplicativo nativo iOS/Android customizado.</p>
         </div>
-        <div class="lamina-card lamina-card-gold">
-          <div class="lamina-badge lamina-badge-gold" style="margin-bottom: 0.75rem;">Premium</div>
-          <h4 class="lamina-h4" style="font-size:1.1rem;">Assessor Digital IA</h4>
+        <div class="navalia-card navalia-card-gold">
+          <div class="navalia-badge navalia-badge-gold" style="margin-bottom: 0.75rem;">Premium</div>
+          <h4 class="navalia-h4" style="font-size:1.1rem;">Assessor Digital IA</h4>
           <p class="text-muted" style="margin-top: 0.5rem; font-size: 0.85rem; line-height: 1.5;">Inteligência no WhatsApp para escalar agendamentos.</p>
         </div>
       </div>
@@ -930,10 +968,10 @@
       </div>
       <div class="component-board">
         <div class="badge-showcase">
-          <span class="lamina-badge lamina-badge-primary">Confirmado</span>
-          <span class="lamina-badge lamina-badge-gold">VIP / Assinante</span>
-          <span class="lamina-badge lamina-badge-danger">No-Show</span>
-          <span class="lamina-badge lamina-badge-neutral">Pendente</span>
+          <span class="navalia-badge navalia-badge-primary">Confirmado</span>
+          <span class="navalia-badge navalia-badge-gold">VIP / Assinante</span>
+          <span class="navalia-badge navalia-badge-danger">No-Show</span>
+          <span class="navalia-badge navalia-badge-neutral">Pendente</span>
         </div>
       </div>
     </section>
@@ -947,12 +985,12 @@
       <div class="component-board">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
           <div class="input-showcase">
-            <div><label class="input-label">Nome da Barbearia</label><input type="text" class="lamina-input" placeholder="Ex: Alces" style="margin-top: 0.5rem;"></div>
-            <div><label class="input-label">E-mail</label><input type="email" class="lamina-input lamina-input-error" value="erro@mail" style="margin-top: 0.5rem;"></div>
+            <div><label class="input-label">Nome da Barbearia</label><input type="text" class="navalia-input" placeholder="Ex: Alces" style="margin-top: 0.5rem;"></div>
+            <div><label class="input-label">E-mail</label><input type="email" class="navalia-input navalia-input-error" value="erro@mail" style="margin-top: 0.5rem;"></div>
           </div>
           <div class="input-showcase">
-            <div><label class="input-label">WhatsApp</label><input type="tel" class="lamina-input" placeholder="(11) 99999-9999" style="margin-top: 0.5rem;"></div>
-            <div><label class="input-label">Desabilitado</label><input type="text" class="lamina-input" value="Bloqueado" disabled style="margin-top: 0.5rem;"></div>
+            <div><label class="input-label">WhatsApp</label><input type="tel" class="navalia-input" placeholder="(11) 99999-9999" style="margin-top: 0.5rem;"></div>
+            <div><label class="input-label">Desabilitado</label><input type="text" class="navalia-input" value="Bloqueado" disabled style="margin-top: 0.5rem;"></div>
           </div>
         </div>
       </div>
@@ -966,7 +1004,7 @@
       </div>
       <div class="component-board" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
         <div>
-          <p class="lamina-text text-muted"><strong>Direto e confiante.</strong> Sem marketing genérico.<br><br>
+          <p class="navalia-text text-muted"><strong>Direto e confiante.</strong> Sem marketing genérico.<br><br>
           <strong style="color: var(--accent-primary);">✓ Certo:</strong> "Seu app na App Store em 7 dias."<br>
           <strong style="color: var(--accent-danger);">✕ Errado:</strong> "Oferecemos soluções inovadoras."</p>
         </div>
@@ -983,7 +1021,7 @@
     <section id="chat" class="ds-section" style="margin-bottom: 0;">
       <div class="section-header">
         <div class="section-kicker">20 // Experiencia LLM</div>
-        <h2 class="section-title">Mockup Chat UI (LÂMINA IA)</h2>
+        <h2 class="section-title">Mockup Chat UI (NAVALIA IA)</h2>
       </div>
       <div class="component-board">
         <div class="chat-demo">
