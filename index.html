@@ -287,6 +287,34 @@
       .component-board { padding: 0.9rem; }
       .navalia-manifesto-quote { font-size: 1.25rem; }
     }
+
+    /* ── App Screenshot Showcase (Static Cards) ── */
+    .phone-viewport-static {
+      border: 4px solid #1E2028;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: var(--shadow-md);
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+      transition: transform var(--duration-fast) var(--ease-smooth);
+    }
+    .phone-viewport-static:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-primary-border);
+      box-shadow: var(--shadow-glow-primary);
+    }
+    .phone-viewport-static-gold:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-gold-border);
+      box-shadow: var(--shadow-glow-gold);
+    }
+    .phone-viewport-static img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -313,13 +341,13 @@
       <a href="#storytelling" class="nav-link">4. Storytelling &amp; Timeline</a>
       <a href="#ecossistema" class="nav-link">5. O Ecossistema (4 Pilares)</a>
       <a href="#webadmin" class="nav-link">6. Web Admin &amp; Permissoes</a>
-      <a href="#navaliapay" class="nav-link">7. NAVALIA Pay: Motor Fintech</a>
+      <a href="#navaliapagamentos" class="nav-link">7. NAVALIA Pagamentos: Motor Fintech</a>
       <a href="#devops" class="nav-link">8. Fabrica de Apps (CI/CD)</a>
       <a href="#ia" class="nav-link">9. NAVALIA IA (Cockpit &amp; RAG)</a>
       <a href="#gamificacao" class="nav-link">10. Matematica da Gamificacao</a>
       <a href="#mercado" class="nav-link">11. Mercado &amp; Concorrencia</a>
-      <a href="#pricing" class="nav-link">12. Modelo de Negocio &amp; Setup</a>
-      <a href="#estrategia" class="nav-link">13. Revisao Estrategica</a>
+      <a href="#pricing" class="nav-link">12. Precificação B2B SaaS</a>
+      <a href="#estrategia" class="nav-link">13. Plano de Lançamento &amp; Homologação</a>
 
       <div class="nav-divider"></div>
 
@@ -333,6 +361,7 @@
       <a href="#inputs" class="nav-link">18. Inputs de Dados</a>
       <a href="#simbolos" class="nav-link">19. Identidade Simbolica &amp; Voz</a>
       <a href="#chat" class="nav-link">20. Chat UI (Mockup IA)</a>
+      <a href="#compliance" class="nav-link">21. Compliance &amp; Checkout Asaas</a>
     </nav>
   </aside>
 
@@ -406,20 +435,272 @@
       <h3 class="navalia-h4" style="margin-top: 2rem; margin-bottom: 1rem;">Os Founders (A Diretoria)</h3>
       <div class="card-showcase-grid">
         <div class="navalia-card">
-          <div class="navalia-badge navalia-badge-gold" style="margin-bottom: 0.75rem;">Founder & Business Ops</div>
+          <div class="navalia-badge navalia-badge-gold" style="margin-bottom: 0.75rem;">Co-Founder &amp; Business Ops</div>
           <h4 class="navalia-h4" style="font-size: 1.1rem;">Gabriel Nascimento</h4>
           <p class="navalia-text text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Empreendedor do setor de beleza masculina e fundador da rede Alces Barbearia. Com +7 anos de mercado e milhares de clientes atendidos na cadeira, tornou-se referência regional ao inovar com o plano de assinaturas (Alces Club), transformando a barbearia em um negócio de receita previsível. Traz a inteligência operacional real, de quem vive a rotina do salão, para dentro da tecnologia.</p>
         </div>
         <div class="navalia-card">
-          <div class="navalia-badge navalia-badge-primary" style="margin-bottom: 0.75rem;">Tech Founder & CTO</div>
+          <div class="navalia-badge navalia-badge-primary" style="margin-bottom: 0.75rem;">Co-Founder &amp; CTO</div>
           <h4 class="navalia-h4" style="font-size: 1.1rem;">Leonardo Pickler</h4>
           <p class="navalia-text text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Engenheiro de Software Sênior/Staff com mais de 16 anos de experiência (.NET/C#, Next.js, Flutter). Especialista em IA (Agentes LLM) e Web3. Ex-CTO & Co-Founder da Nortech App. Traz maturidade arquitetural e velocidade extrema de entrega.</p>
         </div>
         <div class="navalia-card">
-          <div class="navalia-badge navalia-badge-neutral" style="margin-bottom: 0.75rem;">Growth & Product Lead</div>
+          <div class="navalia-badge navalia-badge-neutral" style="margin-bottom: 0.75rem;">Co-Founder &amp; Growth/Product Lead</div>
           <h4 class="navalia-h4" style="font-size: 1.1rem;">Juan Minni</h4>
-          <p class="navalia-text text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">CEO da Starken Tecnologia. +12 anos de marketing digital, performance e UX. Atendeu mais de 100 empresas e gerou R$ 3M+ para negócios locais. O motor que vende e empacota a tecnologia como transformação B2B.</p>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem; font-size: 0.85rem;">CEO da Starken Tecnologia. +12 anos de marketing digital, performance e UX. Atendeu mais de 100 empresas e gerou R$ 3M+ para negócios locais. O motor que vende, empacota e distribui a tecnologia NAVALIA como transformação B2B.</p>
         </div>
+      </div>
+      
+      <!-- O Case Piloto: Alces Barbearia -->
+      <h3 class="navalia-h4" style="margin-top: 2.5rem; margin-bottom: 1rem; color: var(--accent-gold);">⟋ O Case Piloto: Alces Barbearia (Piloto Real)</h3>
+      <p class="navalia-text">Como laboratório de testes em ambiente real da plataforma, a rede <strong>Alces Barbearia</strong> (Blumenau/SC) utiliza o aplicativo mobile nativo e as automações de agendamento em produção. Este piloto no mundo físico validou o modelo de recorrência integrada e preparou as bases para a arquitetura multi-tenant da NAVALIA.</p>
+      
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-thin); padding: 2rem; border-radius: var(--radius-xl); margin-top: 1.5rem;">
+        <span class="navalia-caption" style="display: block; text-transform: uppercase; font-family: var(--font-mono); color: var(--accent-primary); margin-bottom: 1.5rem; letter-spacing: 0.1em;">Fluxo do Aplicativo do Cliente (B2C)</span>
+        
+        <!-- Fase 1: Jornada de Agendamento Convencional -->
+        <h4 class="navalia-h4" style="margin: 1.5rem 0 1rem; font-size: 1.1rem; color: var(--text-pure); border-bottom: 1px solid var(--border-faint); padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span style="color: var(--accent-primary);">01 //</span> Agendamento Convencional &amp; CRM
+        </h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+          <!-- 1. Home -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20home.png" alt="Home B2C"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">01 // Abertura</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Home Inicial</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Entrada do cliente indicando saldo de AlceCoins, nível de prestígio e atalhos rápidos.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ home_screen.dart | profiles
+              </div>
+            </div>
+          </div>
+          
+          <!-- 2. Catálogo de Serviços -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20servi%C3%A7os.png" alt="Serviços B2C"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">02 // Portfólio</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Serviços e Valores</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Vitrine geral de preços e detalhes operacionais dos serviços da barbearia.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ services_screen.dart | services
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Seleção de Serviços -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20agendamento%20sele%C3%A7%C3%A3o%20dos%20servi%C3%A7os.png" alt="Seleção de Serviços B2C"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">03 // Customização</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Seleção de Serviços</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Marcação de múltiplos itens no carrinho antes de escolher o barbeiro.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ booking_screen.dart | services
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Seleção de Barbeiro -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20agendamento%20-%20selecao%20barbeiro.png" alt="Escolha do Barbeiro B2C"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">04 // Profissionais</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Escolha do Profissional</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Vitrine de barbeiros vinculados à filial, com fotos e nomes reais em produção.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ booking_screen.dart | barbers
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Seleção de Horário -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20agendamento%20dia-horario.png" alt="Calendário B2C"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">05 // Agendamento</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Data &amp; Horário</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Calendário de slots dinâmicos do barbeiro selecionado filtrados no dia.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ booking_screen.dart | appointments
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Confirmação do Agendamento -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20confirma%C3%A7%C3%A3o%20do%20agendamento.png" alt="Revisão B2C"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">06 // Revisão</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Confirmação dos Dados</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Revisão completa com valor total acumulado antes da seleção da forma de pagamento.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ booking_screen.dart
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fase 2: Checkout de Assinatura & Gateway Asaas -->
+        <h4 class="navalia-h4" style="margin: 2.5rem 0 1rem; font-size: 1.1rem; color: var(--text-pure); border-bottom: 1px solid var(--border-faint); padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span style="color: var(--accent-primary);">02 //</span> Checkout Financeiro &amp; BaaS (Asaas)
+        </h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+          <!-- 7. Formas de Pagamento -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20forma%20de%20pgto.png" alt="Formas de Pagamento"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">07 // Pagamento</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Formas de Pagamento</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Seleção entre pagar na barbearia, cartão cadastrado ou Pix intermediado pelo Asaas.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ checkout_pix_screen.dart | appointments
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Checkout Assinatura -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20checkout%20assinatura%20plano.png" alt="Checkout Assinatura"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">08 // Assinatura</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Contratação do Plano</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Revisão de valores da mensalidade recorrente antes de gerar o split regulamentado.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ club_screen.dart | plans
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Opção Pix -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20checkout%20assinatura%20plano%20-%20opcao%20pix.png" alt="Pix QR Code"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">09 // Pix Checkout</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">PIX Recorrência</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Geração do QR Code dinâmico do Pix no checkout com validade controlada pelo Asaas.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ checkout_pix_screen.dart | asaas_payment_id
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Webhook Confirmação -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20checkout%20assinatura%20plano%20-%20confirma%C3%A7%C3%A3o%20webhook%20asaas.png" alt="Webhook Asaas"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">10 // Webhook</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Aprovação em Tempo Real</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Aguardando o webhook de pagamento do Asaas notificar o backend Supabase para ativação do plano.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ asaas_webhooks_log &amp; user_subscriptions
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Confirmação do Plano Ativado -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20confirma%C3%A7%C3%A3o%20de%20plano%20ativado.png" alt="Plano Ativado"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">11 // Ativação</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Membro do Clube</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Plano ativado com sucesso e benefícios gravados no perfil do usuário de forma transparente.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ active_subscription_status = 'Ativo'
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fase 3: Experiência VIP Recorrente & Benefícios -->
+        <h4 class="navalia-h4" style="margin: 2.5rem 0 1rem; font-size: 1.1rem; color: var(--text-pure); border-bottom: 1px solid var(--border-faint); padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span style="color: var(--accent-primary);">03 //</span> Experiência VIP &amp; Recorrência (Alces Club)
+        </h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+          <!-- 12. Alces Club Painel -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/B2c%20-%20clube%20assinantes%201.png" alt="Clube VIP"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">12 // Recorrência</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Alces Club (Planos)</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Listagem de planos: Corte Ilimitado, Barba Ilimitado, e Cabelo &amp; Barba Ilimitado.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ club_screen.dart | plans
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. Clube VIP 2 -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/B2c%20-%20clube%20assinantes%202.png" alt="Gestão de Assinatura"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">13 // Detalhes</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Benefícios do Clube</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Detalhes de faturamento recorrente, histórico de cobranças e termos de uso do clube VIP.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ user_subscriptions | plans (features)
+              </div>
+            </div>
+          </div>
+
+          <!-- 14. Home VIP Ativa -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20home%20atualizada%20com%20o%20plano%20de%20assinatura%20ativo.png" alt="Home VIP"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">14 // Home VIP</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Home com Plano Ativo</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Home reativa atualizada: exibe o badge dourada "CLUBE ALCE'S" com benefícios ativos em destaque.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ active_subscription_status
+              </div>
+            </div>
+          </div>
+
+          <!-- 15. Agendamento com Plano Ativo -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem;">
+            <div class="phone-viewport-static">
+              <img src="/screenshots/b2c%20-%20agendamento%20com%20plano%20ativo%20e%20servi%C3%A7os%20com%20beneficios%20atualizados.png" alt="Agendamento VIP"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-primary); text-transform: uppercase; font-size: 0.65rem;">15 // Agendamento VIP</span>
+              <h5 class="navalia-h4" style="margin: 0.2rem 0 0.4rem; font-size: 0.9rem; color: var(--text-pure);">Valores Deduzidos (R$ 0)</h5>
+              <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Ao agendar serviços inclusos no plano (ex: Corte de Cabelo), o valor é deduzido a R$ 0,00.</p>
+              <div style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--accent-gold);">
+                ⚙️ booking_screen.dart | user_subscriptions RLS
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
 
@@ -502,6 +783,106 @@
           </ul>
         </div>
       </div>
+
+      <!-- Barber App Showcase (Case Alces) -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-thin); padding: 2rem; border-radius: var(--radius-xl); margin-top: 2.5rem;">
+        <span class="navalia-caption" style="display: block; text-transform: uppercase; font-family: var(--font-mono); color: var(--accent-gold); margin-bottom: 1rem; letter-spacing: 0.1em;">Área In-App do Barbeiro em Ação</span>
+        <h4 class="navalia-h4" style="margin: 0 0 1.5rem; font-size: 1.2rem; color: var(--text-pure);">Telas Operacionais do Profissional (Case Alces)</h4>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          
+          <!-- Screen 1: Home barbeiro -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 1rem; padding: 1.25rem;">
+            <div class="phone-viewport-static phone-viewport-static-gold">
+              <img src="/screenshots/home%20barbeiro.png" alt="Home B2E"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-gold); text-transform: uppercase;">01 // Caixa</span>
+              <h5 class="navalia-h4" style="margin: 0.25rem 0 0.5rem; font-size: 1rem; color: var(--text-pure);">Home e Metas Diárias</h5>
+              <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Dashboard pessoal do barbeiro exibindo a comissão do dia/mês e o faturamento bruto gerado na cadeira.</p>
+              <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-primary);">
+                ⚙️ admin_screen.dart | appointments
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen 2: Agenda -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 1rem; padding: 1.25rem;">
+            <div class="phone-viewport-static phone-viewport-static-gold">
+              <img src="/screenshots/barbeiro%20-%20barbeiro%20minha%20agenda.png" alt="Agenda B2E"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-gold); text-transform: uppercase;">02 // Cronograma</span>
+              <h5 class="navalia-h4" style="margin: 0.25rem 0 0.5rem; font-size: 1rem; color: var(--text-pure);">Minha Agenda</h5>
+              <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Lista cronológica de cortes agendados com dados do cliente. Sincronizada reativamente com o banco.</p>
+              <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-primary);">
+                ⚙️ barber_agenda_screen.dart | appointments
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen 3: Encaixes -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 1rem; padding: 1.25rem;">
+            <div class="phone-viewport-static phone-viewport-static-gold">
+              <img src="/screenshots/barbeiro%20-%20Tela%20barbeiro%20agendamento.png" alt="Formulário Agendamento B2E"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-gold); text-transform: uppercase;">03 // Operação</span>
+              <h5 class="navalia-h4" style="margin: 0.25rem 0 0.5rem; font-size: 1rem; color: var(--text-pure);">Criação de Agendamento</h5>
+              <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Permite agendar novos clientes na hora diretamente do salão, abrindo o seletor de serviços.</p>
+              <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-primary);">
+                ⚙️ booking_screen.dart | appointments
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen 4: Seleção Cliente -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 1rem; padding: 1.25rem;">
+            <div class="phone-viewport-static phone-viewport-static-gold">
+              <img src="/screenshots/barbeiro%20-%20agendamento%20selecao%20cliente.png" alt="Seleção de Cliente B2E"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-gold); text-transform: uppercase;">04 // CRM Integrado</span>
+              <h5 class="navalia-h4" style="margin: 0.25rem 0 0.5rem; font-size: 1rem; color: var(--text-pure);">Busca de Clientes</h5>
+              <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Busca rápida de perfis de clientes existentes por nome ou telefone na base de dados.</p>
+              <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-primary);">
+                ⚙️ register_screen.dart | profiles
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen 5: Confirmação -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 1rem; padding: 1.25rem;">
+            <div class="phone-viewport-static phone-viewport-static-gold">
+              <img src="/screenshots/barbeiro%20-%20confirma%C3%A7%C3%A3o%20agendamento%20-%20agendar.png" alt="Confirmação B2E"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-gold); text-transform: uppercase;">05 // Confirmação</span>
+              <h5 class="navalia-h4" style="margin: 0.25rem 0 0.5rem; font-size: 1rem; color: var(--text-pure);">Confirmar Encaixe</h5>
+              <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Revisão final antes de realizar a gravação do compromisso e notificar o cliente final.</p>
+              <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-primary);">
+                ⚙️ booking_screen.dart | appointments
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen 6: Perfil -->
+          <div class="navalia-card" style="display: flex; flex-direction: column; gap: 1rem; padding: 1.25rem;">
+            <div class="phone-viewport-static phone-viewport-static-gold">
+              <img src="/screenshots/barbeiro%20-%20perfil.png" alt="Perfil B2E"/>
+            </div>
+            <div>
+              <span class="navalia-caption" style="font-family: var(--font-mono); color: var(--accent-gold); text-transform: uppercase;">06 // Produtividade</span>
+              <h5 class="navalia-h4" style="margin: 0.25rem 0 0.5rem; font-size: 1rem; color: var(--text-pure);">Perfil &amp; Desempenho</h5>
+              <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Gráficos de desempenho do profissional e controle de taxas de retorno e faltas dos clientes.</p>
+              <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-primary);">
+                ⚙️ profile_screen.dart | barbers (store_id)
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <!-- 5. Permissões RLS -->
@@ -539,7 +920,7 @@
             </tr>
             <tr>
               <td><strong class="text-pure">✂️ Barber (Profissional)</strong></td>
-              <td>A visão mais restrita. O barbeiro acessa via app sua própria agenda, métricas de comissão diária do NAVALIA Pay, e encaixes para *seus* clientes.</td>
+              <td>A visão mais restrita. O barbeiro acessa via app sua própria agenda, métricas de comissão diária do NAVALIA Pagamentos, e encaixes para *seus* clientes.</td>
             </tr>
           </tbody>
         </table>
@@ -547,82 +928,209 @@
     </section>
 
     <!-- 6. Fintech Motor -->
-    <section id="navaliapay" class="ds-section">
+    <section id="navaliapagamentos" class="ds-section">
       <div class="section-header">
-        <div class="section-kicker">06 // O Caminho Bilionário</div>
-        <h2 class="section-title">NAVALIA Pay: O Motor Fintech</h2>
+        <div class="section-kicker">06 // O Caminho Transacional</div>
+        <h2 class="section-title">NAVALIA Pagamentos: O Motor Fintech</h2>
       </div>
-      <p class="navalia-text">Um SaaS puro limita a receita à mensalidade. A NAVALIA rompe essa bolha posicionando-se como <strong>Sub-Adquirente (Fintech)</strong> via API White Label do Banco Asaas. Nós monetizamos a operação transacional das barbearias sem nenhum esforço burocrático para elas.</p>
+      <p class="navalia-text">Um SaaS puro limita a receita à mensalidade. A NAVALIA rompe essa bolha posicionando-se como sub-adquirente de pagamentos via API de Banking as a Service (BaaS) do Banco Asaas. Nós monetizamos a operação transacional das barbearias sem nenhum esforço burocrático ou de setup para elas.</p>
+
+      <!-- Selo de Compliance Regulatório Asaas -->
+      <div style="display: flex; align-items: center; gap: 1rem; margin: 1.5rem 0; padding: 1rem; background: var(--bg-elevated); border: 1px solid var(--border-thin); border-radius: var(--radius-md); max-width: 650px;">
+        <a href="https://asaas.com" target="_blank" rel="noopener noreferrer" style="display: block; flex-shrink: 0;">
+          <img src="https://baas.asaas.com/selos/Servicos_financeiros_Asaas-Reduzida-Negativo-Branco.svg?id=e607d25d-fea6-436e-b300-b151c162b89f" alt="Selo Banco Asaas" width="130" height="39" style="display: block; opacity: 0.9; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.9'"/>
+        </a>
+        <span style="font-size: 0.72rem; color: var(--text-muted); line-height: 1.4; font-family: var(--font-body);">
+          <strong>Transparência Reguladora:</strong> Os serviços de pagamento e a abertura de subcontas da plataforma são operacionalizados por <em>Asaas Gestão Financeira S.A.</em> (CNPJ 19.540.550/0001-21), instituição de pagamento autorizada pelo Banco Central. A NAVALIA atua exclusivamente como integradora de tecnologia.
+        </span>
+      </div>
 
       <div class="navalia-manifesto" style="padding: 1.5rem; margin: 1.5rem 0; background: var(--bg-elevated); box-shadow: none; border-radius: var(--radius-md);">
         <p class="navalia-text" style="font-family: var(--font-display); font-size: 1.25rem; color: var(--text-pure); margin: 0; font-weight: 500;">
-          "Onboarding Frictionless. O dono da barbearia digita apenas o CNPJ. A NAVALIA Pay cria a conta bancária dele em background via integração Sub-contas Asaas e já começamos a processar pagamentos. Zero configuração técnica com chaves de API."
+          "Onboarding Frictionless. O dono da barbearia digita apenas o CNPJ. A NAVALIA Pagamentos cria a conta bancária dele em background via integração Sub-contas Asaas e já começamos a processar pagamentos. Zero configuração técnica com chaves de API."
         </p>
       </div>
 
       <div class="card-showcase-grid" style="grid-template-columns: 1fr 1fr;">
         <div class="navalia-card navalia-card-primary">
           <h4 class="navalia-h4">Receita Infinita Exponencial (Take Rate)</h4>
-          <p class="navalia-text text-muted" style="margin-top: 0.5rem;">Se negociarmos PIX a R$ 0,99 de custo de infraestrutura Asaas, a NAVALIA Pay cobra R$ 1,99 da barbearia. Retemos <strong>R$ 1,00 de lucro limpo por cada corte agendado</strong> via App. Escalabilidade absurda além da assinatura mensal de software.</p>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem;">Se negociarmos PIX a R$ 0,99 de custo de infraestrutura Asaas, a NAVALIA Pagamentos cobra R$ 1,99 da barbearia. Retemos <strong>R$ 1,00 de lucro limpo por cada corte agendado</strong> via App. Escalabilidade absurda além da assinatura mensal de software.</p>
         </div>
         <div class="navalia-card navalia-card-gold">
-          <h4 class="navalia-h4">Split Automático de Pagamentos</h4>
-          <p class="navalia-text text-muted" style="margin-top: 0.5rem;">Cliente paga R$ 100 via NAVALIA Pay. Nossa API injeta a regra de negócio financeira: R$ 50 vai direto automático para a conta bancária do barbeiro que atendeu, R$ 50 para o dono da barbearia. Fim do fechamento de caixa manual.</p>
+          <h4 class="navalia-h4">O Diferencial Financeiro NAVALIA</h4>
+          <p class="navalia-text text-muted" style="margin-top: 0.5rem;">Não fazemos split direto para a conta do barbeiro. O nosso foco é empoderar o <strong>dono da barbearia</strong>. A NAVALIA atua como fintech para <strong>garantir o recebimento antecipado</strong> (zerando furos na agenda) e reter apenas a taxa da plataforma. O montante integral cai diretamente na conta do dono, que centraliza o controle do fluxo de caixa e realiza os pagamentos semanais/mensais para a equipe através do painel de gestão. Segurança para o negócio, caixa na mão do proprietário.</p>
         </div>
       </div>
       <div class="navalia-card" style="margin-top: 1.5rem; border-color: var(--accent-gold-border);">
-        <div class="navalia-badge navalia-badge-gold" style="margin-bottom: 0.75rem;">Analise para decisao</div>
-        <h4 class="navalia-h4" style="margin-top:0;">Asaas do cliente vs. NAVALIA Pay</h4>
-        <p class="navalia-text text-muted">Ainda nao precisa ser uma decisao fechada, mas os fluxos favorecem fortemente a tese do NAVALIA Pay. O modelo inicial, em que o cliente cria a propria conta Asaas e fornece a API key/webhook, e mais rapido para validar tecnicamente. Porem, ele cria atrito no onboarding, aumenta risco operacional e limita a captura de receita transacional. O NAVALIA Pay exige mais arquitetura e cuidado, mas entrega uma experiencia mais simples para o cliente e abre uma escala de faturamento muito mais agressiva.</p>
-
+        <div class="navalia-badge navalia-badge-gold" style="margin-bottom: 0.75rem;">Diretriz Estrutural Definida</div>
+        <h4 class="navalia-h4" style="margin-top:0;">Infraestrutura Padrão: NAVALIA Pagamentos (BaaS)</h4>
+        <p class="navalia-text text-muted">A infraestrutura financeira da plataforma utilizará a criação de Subcontas automatizadas via API (Banking as a Service - BaaS) do Asaas. Esse modelo elimina a necessidade de chaves de API manuais por parte dos clientes e permite escalabilidade de receita direta (Take Rate) desde o setup inicial.</p>
+ 
         <div class="strategy-grid" style="margin-top: 1rem;">
           <div class="strategy-card">
-            <span class="strategy-metric">Opcao A</span>
-            <h4 class="navalia-h4">Cliente cria a conta Asaas</h4>
-            <p class="navalia-text text-muted" style="margin:0;">A barbearia cria a conta, valida documentos, configura dados bancarios, gera API key e informa a NAVALIA. O sistema conecta essa conta ao tenant, cria cobrancas e escuta eventos via webhook. E uma ponte valida para piloto, mas depende de acao tecnica do cliente.</p>
+            <span class="strategy-metric">Caminho A</span>
+            <h4 class="navalia-h4">Integração Direta Legada</h4>
+            <p class="navalia-text text-muted" style="margin:0;">A barbearia criaria a conta externamente e forneceria uma API Key manual. Embora simples no início, gera alto atrito operacional, risco de vazamento de credenciais e dependência de suporte técnico manual.</p>
           </div>
           <div class="strategy-card">
-            <span class="strategy-metric">Opcao B</span>
-            <h4 class="navalia-h4">NAVALIA Pay como camada propria</h4>
-            <p class="navalia-text text-muted" style="margin:0;">A NAVALIA abstrai a complexidade financeira: cria ou gerencia subcontas, padroniza webhooks, aplica regras de split/take rate e entrega ao cliente uma implantacao guiada. A barbearia deixa de mexer em chaves, endpoints e configuracoes sensiveis.</p>
+            <span class="strategy-metric">Caminho B (Escolhido)</span>
+            <h4 class="navalia-h4">Subcontas NAVALIA (BaaS)</h4>
+            <p class="navalia-text text-muted" style="margin:0;">A NAVALIA gerencia as contas dos estabelecimentos programaticamente, padroniza regras de split transacional e automatiza webhooks. O dono da barbearia realiza ativação imediata informando apenas o CNPJ.</p>
           </div>
           <div class="strategy-card">
-            <span class="strategy-metric">Sinal comercial</span>
-            <h4 class="navalia-h4">Menos friccao aumenta conversao</h4>
-            <p class="navalia-text text-muted" style="margin:0;">Quanto mais passos tecnicos o dono da barbearia precisa executar, maior o risco de travar a venda. Se a promessa e tecnologia dedicada sem dor, o pagamento tambem precisa parecer plug-and-play.</p>
+            <span class="strategy-metric">Sinal Comercial</span>
+            <h4 class="navalia-h4">Fricção Zero no Onboarding</h4>
+            <p class="navalia-text text-muted" style="margin:0;">Quanto mais passos manuais o cliente final (dono da barbearia) executa no setup, menor a taxa de ativação do SaaS. O modelo de subcontas garante onboarding instantâneo e maior conversão de leads.</p>
           </div>
           <div class="strategy-card">
-            <span class="strategy-metric">Sinal financeiro</span>
-            <h4 class="navalia-h4">A receita deixa de ser so mensalidade</h4>
-            <p class="navalia-text text-muted" style="margin:0;">Com NAVALIA Pay, cada transacao vira potencial de monetizacao: taxa Pix/cartao, take rate, split, assinatura recorrente, repasse de barbeiro e fechamento de caixa. Isso cria uma curva de faturamento mais agressiva que SaaS puro.</p>
+            <span class="strategy-metric">Sinal Financeiro</span>
+            <h4 class="navalia-h4">Monetização de Volume (Take Rate)</h4>
+            <p class="navalia-text text-muted" style="margin:0;">O tráfego de pagamentos de agendamentos e planos VIP gera receita transacional incremental direta para a NAVALIA: retemos um percentual fixo/variável retido diretamente na fonte.</p>
           </div>
         </div>
-
+ 
         <h4 class="navalia-h4" style="margin-top: 1.5rem;">Comparativo de fluxo operacional</h4>
         <div style="overflow-x:auto; margin-top: 0.75rem;">
           <table class="navalia-table-dense">
             <thead>
-              <tr><th>Critério</th><th>Asaas do cliente</th><th>NAVALIA Pay</th></tr>
+              <tr><th>Critério</th><th>Asaas do cliente</th><th>NAVALIA Pagamentos</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>Onboarding</strong></td><td>Cliente precisa criar conta, configurar chave e liberar acesso.</td><td>Cliente informa dados básicos; a NAVALIA conduz a ativacao financeira.</td></tr>
-              <tr><td><strong>Suporte</strong></td><td>Mais chamados sobre API key, webhook, permissao e configuracao.</td><td>Menos variacao operacional, pois o fluxo fica padronizado.</td></tr>
-              <tr><td><strong>Escala</strong></td><td>Cada cliente vira uma integracao quase artesanal.</td><td>Modelo replicavel para centenas de barbearias com a mesma arquitetura.</td></tr>
-              <tr><td><strong>Receita</strong></td><td>Principalmente mensalidade e setup.</td><td>Mensalidade + setup + margem transacional + produtos financeiros futuros.</td></tr>
-              <tr><td><strong>Controle</strong></td><td>Dados financeiros ficam fragmentados em contas individuais.</td><td>Conciliacao, split, relatorios e regra de negocio ficam centralizados.</td></tr>
-              <tr><td><strong>Risco</strong></td><td>Menor complexidade inicial, maior atrito comercial.</td><td>Maior responsabilidade tecnica, maior potencial de defensabilidade.</td></tr>
+              <tr><td><strong>Onboarding</strong></td><td>Cliente precisa criar conta, configurar chave e liberar acesso.</td><td>Cliente informa dados básicos; a NAVALIA conduz a ativação financeira via API.</td></tr>
+              <tr><td><strong>Suporte</strong></td><td>Mais chamados sobre API key, webhook e falhas de permissão.</td><td>Menos variação operacional, pois o fluxo de chamadas é padronizado.</td></tr>
+              <tr><td><strong>Escala</strong></td><td>Cada cliente vira uma integração manual artesanal.</td><td>Modelo replicável para centenas de barbearias com a mesma infraestrutura.</td></tr>
+              <tr><td><strong>Receita</strong></td><td>Principalmente mensalidade e setup fixo.</td><td>Mensalidade + setup + markup transacional direto de comissão do Asaas.</td></tr>
+              <tr><td><strong>Controle</strong></td><td>Dados financeiros ficam fragmentados em painéis individuais.</td><td>Conciliação, split, relatórios e regras de negócio centralizados por nós.</td></tr>
+              <tr><td><strong>Risco</strong></td><td>Menor complexidade inicial, maior atrito comercial.</td><td>Maior responsabilidade técnica, mas com extrema defensabilidade e LTV.</td></tr>
             </tbody>
           </table>
         </div>
-
-        <h4 class="navalia-h4" style="margin-top: 1.5rem;">Recomendacao para apresentar aos socios</h4>
+ 
+        <h4 class="navalia-h4" style="margin-top: 1.5rem;">Diretrizes de Implementação Transacional</h4>
         <ul class="navalia-list" style="margin-bottom:0;">
-          <li><strong>Nao descartar a integracao direta:</strong> usar o modelo "Asaas do cliente" como caminho de piloto, contingencia ou fase de aprendizado.</li>
-          <li><strong>Priorizar arquitetura para NAVALIA Pay:</strong> desde o inicio, criar uma camada PaymentProvider para permitir migrar sem reescrever app, agenda ou painel.</li>
-          <li><strong>Validar com poucos clientes:</strong> medir tempo de ativacao, quantidade de chamados, pagamentos processados, falhas de webhook e adesao ao pagamento integrado.</li>
-          <li><strong>Decidir por dados:</strong> se o fluxo manual gerar atrito, suporte alto ou perda de venda, isso reforca a virada para NAVALIA Pay como produto central.</li>
-          <li><strong>Tese atual:</strong> analisando escala, receita e simplicidade de implantacao, NAVALIA Pay parece o caminho mais forte, mas deve ser apresentado como decisao estrategica baseada em fluxo e validacao.</li>
+          <li><strong>Padronização de Subcontas (BaaS):</strong> Implementação direta da criação de subcontas transacionais via API do Asaas durante o onboarding das barbearias.</li>
+          <li><strong>Take Rate Automatizado:</strong> Configuração das cobranças com retenção automática de comissão transacional da NAVALIA repassada para a conta Master.</li>
+          <li><strong>Fluxo Operacional Simplificado:</strong> Integração de Webhooks para atualização reativa do status de agendamentos e assinaturas recorrentes no banco de dados.</li>
         </ul>
+      </div>
+
+      <!-- Detalhamento Técnico da Integração Asaas BaaS & Recorrência -->
+      <div class="navalia-card" style="margin-top: 1.5rem; border-color: rgba(0, 212, 170, 0.25); background: linear-gradient(180deg, rgba(0, 212, 170, 0.02) 0%, rgba(17, 19, 24, 1) 100%);">
+        <h4 class="navalia-h4" style="color: var(--accent-primary); display: flex; align-items: center; gap: 0.5rem; margin-top: 0;">
+          <span>⚙️</span> Engenharia Transacional: Integração Asaas BaaS &amp; Recorrência
+        </h4>
+        <p class="navalia-text text-muted" style="font-size: 0.85rem; margin-bottom: 1.5rem;">
+          Especificação técnica de ponta a ponta dos fluxos de subcontas, ciclo de vida das assinaturas (mensalidades), webhooks e automação de alertas via Push/WhatsApp.
+        </p>
+
+        <!-- Três Pilares Principais (Sandbox, Assinatura, Webhooks) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+          
+          <!-- Sandbox vs. Produção -->
+          <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-thin);">
+            <h5 class="navalia-h4" style="font-size: 0.95rem; color: var(--accent-primary); margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+              <span>🧪</span> 1. Sandbox vs. Produção
+            </h5>
+            <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.45; margin: 0;">
+              Os testes estão ativos em ambiente Sandbox (`sandbox.asaas.com/api`), validando a geração de cobranças e tokenização. A virada de chave para produção ocorre imediatamente após a aprovação do KYC (documentos da barbearia piloto) no Asaas real.
+            </p>
+            <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-gold);">
+              ⚙️ variables: ASAAS_API_URL | real KYC
+            </div>
+          </div>
+
+          <!-- Ciclo de Vida da Recorrência -->
+          <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-thin);">
+            <h5 class="navalia-h4" style="font-size: 0.95rem; color: var(--accent-gold); margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+              <span>💳</span> 2. Assinatura &amp; Vencimentos
+            </h5>
+            <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.45; margin: 0;">
+              Suporte a <strong>Cartão de Crédito Recorrente</strong> (tokenização no Asaas via `v3/creditCard/tokenize` e débito automático no vencimento) e <strong>PIX Recorrente</strong> (geração automática de nova chave cópia-e-cola a cada ciclo enviado ao app).
+            </p>
+            <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-gold);">
+              ⚙️ endpoints: POST /v3/subscriptions
+            </div>
+          </div>
+
+          <!-- Webhooks & Alertas FCM -->
+          <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-thin);">
+            <h5 class="navalia-h4" style="font-size: 0.95rem; color: var(--accent-primary); margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+              <span>🔔</span> 3. Push de Renovação (FCM)
+            </h5>
+            <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.45; margin: 0;">
+              Rotina cron no Supabase Edge varre vencimentos 3 dias antes (`nextDueDate - 3`) e dispara notificações push (FCM) e WhatsApp de cobrança proativa. Atrasos ativam suspensão de benefícios VIP após 3 dias de tolerância.
+            </p>
+            <div style="margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-gold);">
+              ⚙️ cron: edge_functions | nextDueDate
+            </div>
+          </div>
+        </div>
+
+        <!-- O Ciclo Operacional Detalhado -->
+        <h4 class="navalia-h4" style="color: var(--text-pure); margin-bottom: 1rem; font-size: 1.1rem; border-top: 1px solid var(--border-faint); padding-top: 1.5rem;">⟋ Fluxo Operacional: Etapa por Etapa</h4>
+        <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2rem;">
+          
+          <div style="display: flex; gap: 1rem; align-items: flex-start;">
+            <div style="background: var(--accent-primary-bg); color: var(--accent-primary); font-family: var(--font-mono); font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: bold;">FASE 1</div>
+            <div>
+              <strong style="color: var(--text-pure); font-size: 0.88rem; display: block; margin-bottom: 0.25rem;">Cadastro e Onboarding da Barbearia</strong>
+              <p class="navalia-text text-muted" style="font-size: 0.8rem; margin: 0; line-height: 1.45;">O dono da barbearia digita o CNPJ no Web Admin. A NAVALIA cria programaticamente a Subconta no Asaas (`POST /v3/accounts`) e retorna o `access_token` específico. Em seguida, os documentos de KYC (identidade do dono, residência e cartão CNPJ) são enviados via API (`POST /accounts/{id}/documents`) em segundo plano de forma transparente.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; align-items: flex-start;">
+            <div style="background: var(--accent-gold-bg); color: var(--accent-gold); font-family: var(--font-mono); font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: bold;">FASE 2</div>
+            <div>
+              <strong style="color: var(--text-pure); font-size: 0.88rem; display: block; margin-bottom: 0.25rem;">Checkout do Cliente e Ativação do Plano</strong>
+              <p class="navalia-text text-muted" style="font-size: 0.8rem; margin: 0; line-height: 1.45;">Ao selecionar a assinatura no App B2C, o cliente digita o cartão (tokenizado no gateway) ou escolhe PIX. O Asaas gera a transação. O webhook de pagamento da NAVALIA escuta e valida a confirmação de recebimento, alterando imediatamente no Supabase o status do usuário para ativo, recalculando o valor dos cortes elegíveis para R$ 0,00.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; align-items: flex-start;">
+            <div style="background: var(--accent-primary-bg); color: var(--accent-primary); font-family: var(--font-mono); font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: bold;">FASE 3</div>
+            <div>
+              <strong style="color: var(--text-pure); font-size: 0.88rem; display: block; margin-bottom: 0.25rem;">Renovação Automatizada e Cobrança Consolidada</strong>
+              <p class="navalia-text text-muted" style="font-size: 0.8rem; margin: 0; line-height: 1.45;">Todo mês, o Asaas emite a fatura da assinatura. O webhook da NAVALIA intercepta o evento, dispara avisos push nativos pré-renovação para o celular do cliente e atualiza o extrato histórico de faturamento da barbearia. O split de markup da NAVALIA retém a taxa administrativa direto no Asaas Master em background.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tabela de Mapeamento do Webhook Asaas -->
+        <h4 class="navalia-h4" style="color: var(--text-pure); margin-bottom: 0.75rem; font-size: 1.1rem; border-top: 1px solid var(--border-faint); padding-top: 1.5rem;">⟋ Mapeamento de Eventos de Webhook (Asaas ⟷ Supabase)</h4>
+        <div style="overflow-x: auto;">
+          <table class="navalia-table-dense">
+            <thead>
+              <tr>
+                <th>Evento Asaas (BaaS Webhook)</th>
+                <th>Ação Processada no Backend Supabase</th>
+                <th>Disparo Automático de Notificação / Alerta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code style="color: var(--accent-primary); font-size: 0.75rem;">PAYMENT_CREATED</code></td>
+                <td>Registra a nova fatura da mensalidade gerada na tabela <code style="font-size:0.75rem;">faturas</code> do cliente.</td>
+                <td><strong>Push FCM:</strong> Alerta de boleto/Pix gerado para a renovação mensal disponível para cópia.</td>
+              </tr>
+              <tr>
+                <td><code style="color: var(--accent-primary); font-size: 0.75rem;">PAYMENT_CONFIRMED</code></td>
+                <td>Marca a fatura como paga. Ativa ou renova o status do plano na tabela <code style="font-size:0.75rem;">user_subscriptions</code> para "Ativo".</td>
+                <td><strong>Push FCM:</strong> "Sua mensalidade foi confirmada! Benefícios VIP liberados."</td>
+              </tr>
+              <tr>
+                <td><code style="color: var(--accent-primary); font-size: 0.75rem;">PAYMENT_OVERDUE</code></td>
+                <td>Atualiza a assinatura para "Atrasada". Inicia contagem de carência de 3 dias no Supabase.</td>
+                <td><strong>Push &amp; WhatsApp:</strong> "Seu pagamento está pendente. Regularize em até 3 dias para evitar suspensão."</td>
+              </tr>
+              <tr>
+                <td><code style="color: var(--accent-primary); font-size: 0.75rem;">PAYMENT_DELETED</code></td>
+                <td>Marca a assinatura como "Cancelada" e remove as permissões RLS do usuário para agendar com valor R$ 0.</td>
+                <td><strong>Push FCM:</strong> "Seu plano VIP foi cancelado. Sentiremos sua falta!"</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -766,80 +1274,145 @@
         <div class="section-kicker">11 // Go-To-Market & Financeiro</div>
         <h2 class="section-title">Precificação B2B SaaS</h2>
       </div>
-      <p class="navalia-text">Venderemos uma <strong>Transformação Digital</strong> completa. Foco implacável no Ideal Customer Profile (ICP): Barbearias Tier 1 e Tier 2 (+3 cadeiras e faturamento > R$ 50k). Negócios pequenos não suportariam o nosso setup alto e qualidade da tecnologia.</p>
+      <p class="navalia-text">Posicionamento comercial agressivo focado no Ideal Customer Profile (ICP): Barbearias Tier 1 e Tier 2 (+3 cadeiras e faturamento > R$ 50k). Graças à automatização total da nossa pipeline de CI/CD (Fábrica de Apps), quebramos a barreira do setup cobrado no mercado, gerando onboarding imediato com infraestrutura premium.</p>
+
+      <!-- Diferencial de Setup Zero (Automático) -->
+      <div style="background: rgba(0, 212, 170, 0.05); border: 1px dashed var(--accent-primary-border); padding: 1.25rem; border-radius: var(--radius-lg); margin: 1.5rem 0; display: flex; align-items: flex-start; gap: 1rem;">
+        <span style="font-size: 1.5rem; line-height: 1;">⚡</span>
+        <div>
+          <h4 class="navalia-h4" style="margin: 0 0 0.25rem; color: var(--accent-primary); font-size: 1rem;">A Vantagem do Setup Acessível (CI/CD Automático)</h4>
+          <p class="navalia-text text-muted" style="margin: 0; font-size: 0.82rem;">Tradicionalmente, a publicação de um aplicativo nativo whitelabel nas lojas exige mais de 30 horas de desenvolvimento manual (geração de credenciais, certificados e compilação), custando acima de R$ 5.000 de setup nas outras plataformas. A NAVALIA automatizou esse processo com pipelines Fastlane + GitHub Actions. Reduzimos o custo técnico, repassando um <strong>setup extremamente competitivo</strong> para acelerar a entrada e capturar volume de transação (Take Rate).</p>
+        </div>
+      </div>
       
-      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
-        <div class="navalia-card" style="padding: 1rem 1.5rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <h4 class="navalia-h4 text-primary" style="font-size: 1.1rem;">Essencial</h4>
-            <span class="navalia-mono text-primary" style="font-size: 0.8rem;">R$ 197 / mês + Setup R$ 2.500</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem;">
+        <!-- Essencial -->
+        <div class="navalia-card" style="flex: 1 1 320px; max-width: 100%; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(255, 255, 255, 0.15); background: linear-gradient(135deg, rgba(255, 255, 255, 0.01) 0%, rgba(17, 19, 24, 1) 100%);">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <span class="navalia-badge navalia-badge-neutral" style="margin-bottom: 0.5rem; background: rgba(255,255,255,0.06); color: #fff;">Painel &amp; App</span>
+                <h4 class="navalia-h4 text-pure" style="font-size: 1.2rem; margin: 0;">Essencial</h4>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-family: var(--font-mono); font-size: 1.15rem; color: var(--text-pure); font-weight: bold;">R$ 297 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">/mês</span></div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Setup R$ 997</div>
+              </div>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 1.25rem;">A porta de entrada ideal para barbearias tradicionais que buscam profissionalizar sua agenda com marca própria.</p>
+            <ul class="navalia-list" style="padding-left: 0; font-size: 0.78rem; display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid var(--border-faint); padding-top: 1rem; list-style-type: none;">
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--text-muted);">✓</span> Web Admin Central (Cockpit Completo)</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--text-muted);">✓</span> Aplicativo Nativo B2C (Apple/Google)</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--text-muted);">✓</span> Gamificação Base (XP e Moedas Fidelidade)</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--text-muted);">✓</span> Notificações Push Ilimitadas</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--text-muted);">✓</span> Banco de Dados Supabase Isolado</li>
+            </ul>
           </div>
-          <p class="navalia-text text-muted" style="margin: 0; font-size: 0.85rem;">Web Admin Central + App Cliente Publicado nas Lojas Apple/Google + Gamificação Base.</p>
         </div>
-        <div class="navalia-card" style="padding: 1rem 1.5rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <h4 class="navalia-h4 text-gold" style="font-size: 1.1rem;">Pro (O Foco da Venda)</h4>
-            <span class="navalia-mono text-gold" style="font-size: 0.8rem;">R$ 347 / mês + Setup R$ 4.000</span>
+
+        <!-- Pro (O Foco da Venda) -->
+        <div class="navalia-card" style="flex: 1 1 320px; max-width: 100%; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(212, 168, 83, 0.45); background: linear-gradient(135deg, rgba(212, 168, 83, 0.06) 0%, rgba(17, 19, 24, 1) 100%);">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                  <span class="navalia-badge navalia-badge-gold" style="margin-bottom: 0;">Fintech &amp; Recorrência</span>
+                  <span style="background: var(--accent-gold); color: #000; font-size: 0.6rem; font-family: var(--font-mono); padding: 0.15rem 0.4rem; border-radius: var(--radius-sm); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block;">Foco da Venda</span>
+                </div>
+                <h4 class="navalia-h4 text-pure" style="font-size: 1.2rem; margin: 0;">Pro</h4>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-family: var(--font-mono); font-size: 1.15rem; color: var(--accent-gold); font-weight: bold;">R$ 497 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">/mês</span></div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Setup R$ 1.497</div>
+              </div>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 1.25rem;">O plano perfeito para barbearias de alta performance que desejam alavancar a receita com recorrência e fintech.</p>
+            <ul class="navalia-list" style="padding-left: 0; font-size: 0.78rem; display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid var(--border-faint); padding-top: 1rem; list-style-type: none;">
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-gold);">✓</span> Tudo do plano <strong>Essencial</strong></li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-gold);">✓</span> NAVALIA Pagamentos (Gateway Integrado)</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-gold);">✓</span> Clube de Assinatura (Recorrência Integrada)</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-gold);">✓</span> Retenção de Faltas via Pix Antecipado</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-gold);">✓</span> Painel de Comissionamento e Metas</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-gold);">✓</span> Analytics Financeiro e Relatórios</li>
+            </ul>
           </div>
-          <p class="navalia-text text-muted" style="margin: 0; font-size: 0.85rem;">Essencial + NAVALIA Pay Automático (Split Asaas) + Clube de Assinatura Recorrente + Metas Financeiras e Analytics Avançado.</p>
         </div>
-        <div class="navalia-card navalia-card-glass" style="padding: 1rem 1.5rem; border-color: var(--accent-primary);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <h4 class="navalia-h4 text-pure" style="font-size: 1.1rem;">Plus (Módulo IA)</h4>
-            <span class="navalia-mono text-pure" style="font-size: 0.8rem;">R$ 597+ / mês + Tokens + Setup R$ 6.000</span>
+
+        <!-- Plus (Ecossistema 360) -->
+        <div class="navalia-card" style="flex: 1 1 320px; max-width: 100%; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(0, 212, 170, 0.45); background: linear-gradient(135deg, rgba(0, 212, 170, 0.06) 0%, rgba(17, 19, 24, 1) 100%);">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+              <div>
+                <span class="navalia-badge navalia-badge-primary" style="margin-bottom: 0.5rem;">Ecossistema 360</span>
+                <h4 class="navalia-h4 text-pure" style="font-size: 1.2rem; margin: 0;">Plus (Completo)</h4>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-family: var(--font-mono); font-size: 1.15rem; color: var(--accent-primary); font-weight: bold;">R$ 997 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">/mês</span></div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Setup R$ 2.497</div>
+              </div>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 1.25rem;">O ecossistema premium 360° definitivo. Uma operação de altíssimo faturamento totalmente integrada por aplicativos, IA, autoatendimento e automação.</p>
+            <ul class="navalia-list" style="padding-left: 0; font-size: 0.78rem; display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid var(--border-faint); padding-top: 1rem; list-style-type: none;">
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-primary);">✓</span> Tudo do plano <strong>Pro</strong></li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-primary);">✓</span> Atendente IA Autônomo no WhatsApp WABA</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-primary);">✓</span> Homologação e Publicação Premium (Lojas de Apps)</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-primary);">✓</span> Marketing Preditivo (Automações de Reengajamento)</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-primary);">✓</span> Customização Avançada das Regras de Gamificação</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--accent-primary);">✓</span> Onboarding VIP &amp; Suporte Prioritário dedicado</li>
+            </ul>
           </div>
-          <p class="navalia-text text-muted" style="margin: 0; font-size: 0.85rem;">Pro + Atendente NAVALIA IA no WhatsApp + Assessor Preditivo Dashboard + Integração Oficial WABA (WhatsApp API).</p>
         </div>
+
       </div>
     </section>
 
 
-    <!-- 12. Revisao Estrategica -->
+    <!-- 12. Plano de Lançamento & Homologação -->
     <section id="estrategia" class="ds-section">
       <div class="section-header">
-        <div class="section-kicker">12 // Revis&atilde;o Estrat&eacute;gica</div>
-        <h2 class="section-title">Plano de melhoria e execu&ccedil;&atilde;o</h2>
-        <p class="section-desc">Minha leitura do projeto: a tese est&aacute; forte, mas precisa deixar mais evidente o caminho de valida&ccedil;&atilde;o, o que entra no MVP, quais riscos precisam ser controlados e quais m&eacute;tricas provam que a NAVALIA est&aacute; pronta para escalar.</p>
+        <div class="section-kicker">12 // Engenharia de Go-To-Market</div>
+        <h2 class="section-title">Plano de Lançamento &amp; Homologação</h2>
+        <p class="section-desc">O desenvolvimento do piloto inicial foi concluído. Agora, o foco estratégico reside na homologação e submissão do aplicativo nas lojas (App Store e Google Play) e na ativação da infraestrutura transacional do Asaas e notificações automatizadas.</p>
       </div>
 
       <div class="strategy-grid">
         <div class="strategy-card">
-          <span class="strategy-metric">Diagn&oacute;stico</span>
-          <h4 class="navalia-h4">O site vende bem a vis&atilde;o, mas pode vender melhor a ordem de execu&ccedil;&atilde;o.</h4>
-          <p class="navalia-text text-muted" style="margin:0;">Hoje a narrativa mostra ambi&ccedil;&atilde;o, tecnologia e marca. A melhoria &eacute; transformar isso em leitura de investidor e operador: prioridade, prova, risco e pr&oacute;xima entrega.</p>
+          <span class="strategy-metric">Piloto Operacional</span>
+          <h4 class="navalia-h4">Submissão nas Lojas de Apps</h4>
+          <p class="navalia-text text-muted" style="margin:0;">O código-fonte base do aplicativo nativo whitelabel está finalizado. O foco agora é a geração de certificados digitais e compilação automatizada nas contas de desenvolvedores das lojas oficiais.</p>
         </div>
         <div class="strategy-card">
-          <span class="strategy-metric">Foco comercial</span>
-          <h4 class="navalia-h4">O produto inicial deve ser vendido como transforma&ccedil;&atilde;o operacional, n&atilde;o como lista de features.</h4>
-          <p class="navalia-text text-muted" style="margin:0;">A oferta mais forte &eacute;: app com marca pr&oacute;pria + agenda central + recorr&ecirc;ncia + pagamentos. IA entra como expans&atilde;o premium quando o cliente j&aacute; percebe valor no fluxo base.</p>
+          <span class="strategy-metric">Asaas Engine</span>
+          <h4 class="navalia-h4">Recorrência &amp; Webhooks Ativos</h4>
+          <p class="navalia-text text-muted" style="margin:0;">Implementação de webhooks dedicados para escutar eventos de pagamento em tempo real (ex: PAYMENT_CONFIRMED, SUBSCRIPTION_CREATED). Sincronização direta com a tabela `user_subscriptions` do Supabase.</p>
         </div>
         <div class="strategy-card">
-          <span class="strategy-metric">MVP recomendado</span>
-          <h4 class="navalia-h4">Come&ccedil;ar pelo ciclo agenda, cliente, pagamento e painel.</h4>
-          <p class="navalia-text text-muted" style="margin:0;">MVP enxuto: multi-tenant, cadastro da barbearia, agenda, app cliente, painel do dono, cobran&ccedil;a recorrente e relat&oacute;rio simples. Gamifica&ccedil;&atilde;o e IA entram depois de medir ades&atilde;o.</p>
+          <span class="strategy-metric">Push &amp; Alertas</span>
+          <h4 class="navalia-h4">Notificações Nativas e FCM</h4>
+          <p class="navalia-text text-muted" style="margin:0;">Integração com Firebase Cloud Messaging (FCM) e WhatsApp Business API para acionar pushes nativos de confirmação, lembretes de corte automáticos e alertas de cobrança sem intervenção humana.</p>
         </div>
         <div class="strategy-card">
-          <span class="strategy-metric">Risco principal</span>
-          <h4 class="navalia-h4">Complexidade antes de valida&ccedil;&atilde;o pode atrasar receita.</h4>
-          <p class="navalia-text text-muted" style="margin:0;">O maior cuidado &eacute; n&atilde;o tentar entregar fintech, app, RAG, gamifica&ccedil;&atilde;o e whitelabel completo no mesmo primeiro pacote. A vers&atilde;o 1 precisa provar venda e reten&ccedil;&atilde;o.</p>
+          <span class="strategy-metric">Take Rate</span>
+          <h4 class="navalia-h4">Ativação Financeira Automatizada</h4>
+          <p class="navalia-text text-muted" style="margin:0;">Homologação do fluxo de repasse (markup transacional) para a conta Master da NAVALIA, garantindo o recolhimento do Take Rate sobre pagamentos no Pix e cartão desde o primeiro corte.</p>
         </div>
       </div>
 
-      <h3 class="navalia-h4" style="margin-top: 2rem;">Roadmap recomendado</h3>
+      <h3 class="navalia-h4" style="margin-top: 2rem;">Cronograma de Ativação Tática</h3>
       <div class="strategy-roadmap">
-        <div class="strategy-step"><span>0-30 dias</span><strong>Valida&ccedil;&atilde;o de oferta</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Landing comercial, demo clic&aacute;vel, pitch de setup e 10 conversas com barbearias ICP.</p></div>
-        <div class="strategy-step"><span>31-60 dias</span><strong>MVP operacional</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Agenda, cliente, painel, tenant_id, permiss&otilde;es, pagamentos b&aacute;sicos e primeira barbearia piloto.</p></div>
-        <div class="strategy-step"><span>61-90 dias</span><strong>Reten&ccedil;&atilde;o e receita</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Clube recorrente, relat&oacute;rios, comiss&otilde;es, no-show e acompanhamento semanal de uso.</p></div>
-        <div class="strategy-step"><span>90+ dias</span><strong>Escala premium</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Split Asaas, IA WhatsApp, RAG, whitelabel automatizado e playbook de venda B2B.</p></div>
+        <div class="strategy-step"><span>Etapa 1 (Imediato)</span><strong>Homologação &amp; Lojas</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Certificação de subcontas Asaas para emissão de Pix instantâneo e submissão dos builds de produção nas lojas Apple e Google.</p></div>
+        <div class="strategy-step"><span>Etapa 2</span><strong>Sincronia de Assinaturas</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Ativação do webhook Asaas no Supabase para escuta de confirmação de Pix/Cartão, liberando os benefícios VIP reativos no app instantaneamente.</p></div>
+        <div class="strategy-step"><span>Etapa 3</span><strong>Push &amp; Automação FCM</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Vinculação dos tokens FCM do app para envio automático de lembretes push de 2h/24h antes dos agendamentos, reduzindo o no-show.</p></div>
+        <div class="strategy-step"><span>Etapa 4</span><strong>Escala whitelabel</strong><p class="navalia-text text-muted" style="margin:0.5rem 0 0; font-size:0.85rem;">Abertura do cockpit web admin para clonagem e parametrização de novos aplicativos whitelabel via GitHub Actions para novos clientes ICP.</p></div>
       </div>
 
       <div class="navalia-card navalia-card-primary" style="margin-top: 1.5rem;">
-        <h4 class="navalia-h4" style="margin-top:0;">M&eacute;tricas que devem guiar a pr&oacute;xima vers&atilde;o</h4>
+        <h4 class="navalia-h4" style="margin-top:0;">Métricas Críticas de Engenharia Operacional</h4>
         <ul class="navalia-list" style="margin-bottom:0;">
-          <li><strong>Ativa&ccedil;&atilde;o:</strong> primeira barbearia com agenda publicada, profissionais cadastrados e clientes ativos.</li>
-          <li><strong>Uso:</strong> agendamentos via app por semana, taxa de retorno e redu&ccedil;&atilde;o de mensagens manuais no WhatsApp.</li>
-          <li><strong>Receita:</strong> MRR por barbearia, setup recebido, take rate potencial e ades&atilde;o ao clube recorrente.</li>
-          <li><strong>Expans&atilde;o:</strong> n&uacute;mero de filiais, profissionais ativos e upgrades para Pay/IA.</li>
+          <li><strong>Tempo de Sincronia de Webhooks:</strong> Intervalo entre o pagamento do Pix pelo cliente e a liberação do status 'Ativo' via RLS no banco.</li>
+          <li><strong>Redução de No-Shows (Push FCM):</strong> Impacto dos lembretes push automáticos nativos na redução de faltas e assiduidade dos clientes.</li>
+          <li><strong>Eficiência da Fábrica de Apps:</strong> Tempo total de execução do workflow GitHub Actions na compilação e publicação bem-sucedida de novos apps whitelabel.</li>
+          <li><strong>Volume Geral Transacionado (GTV):</strong> Total transacionado sob as subcontas Asaas sob comissão de markup do gateway da NAVALIA.</li>
         </ul>
       </div>
     </section>
@@ -1024,7 +1597,7 @@
     </section>
 
     <!-- 20. Chat UI -->
-    <section id="chat" class="ds-section" style="margin-bottom: 0;">
+    <section id="chat" class="ds-section">
       <div class="section-header">
         <div class="section-kicker">20 // Experiencia LLM</div>
         <h2 class="section-title">Mockup Chat UI (NAVALIA IA)</h2>
@@ -1036,6 +1609,73 @@
           <div class="chat-bubble chat-client"><strong>Cliente:</strong> Confirma! Posso pagar PIX na hora?</div>
           <div class="chat-bubble chat-ai">Confirmado! ✅ O pagamento pode ser feito na hora, sim. Até às 15h! 🪒</div>
         </div>
+      </div>
+    </section>
+
+    <!-- 21. Compliance & Checkout Asaas -->
+    <section id="compliance" class="ds-section" style="margin-bottom: 0;">
+      <div class="section-header">
+        <div class="section-kicker">21 // Regulação e Transparência</div>
+        <h2 class="section-title">Compliance BaaS &amp; Mockup Checkout</h2>
+        <p class="section-desc">Homologação de marca para conformidade com a Resolução Conjunta nº 16/2025 do Banco Central do Brasil. Exibição obrigatória do selo do intermediador de pagamentos nas interfaces de checkout.</p>
+      </div>
+      
+      <div class="component-board" style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <!-- Mockup do Checkout Mobile/Web com Selo -->
+        <div style="background: var(--bg-void); border: 1px solid var(--border-thin); border-radius: var(--radius-lg); padding: 1.5rem; max-width: 420px; margin: 0 auto; width: 100%;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-thin); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+            <span style="font-family: var(--font-display); font-weight: 700; color: var(--text-pure);">Finalizar Agendamento</span>
+            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-primary);">ID: #NAV-7890</span>
+          </div>
+          
+          <div style="background: var(--bg-surface); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; border: 1px solid var(--border-faint);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Serviço:</span>
+              <strong style="font-size: 0.85rem; color: var(--text-pure);">Corte Master + Barba</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Profissional:</span>
+              <span style="font-size: 0.85rem; color: var(--text-main);">Lucas Silva</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Total:</span>
+              <strong style="font-size: 1.1rem; color: var(--accent-primary);">R$ 75,00</strong>
+            </div>
+          </div>
+          
+          <div style="margin-bottom: 1.5rem;">
+            <label class="input-label" style="display: block; margin-bottom: 0.5rem;">Forma de Pagamento</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+              <button class="navalia-btn navalia-btn-primary navalia-btn-sm" style="justify-content: center;">⚡ PIX</button>
+              <button class="navalia-btn navalia-btn-secondary navalia-btn-sm" style="justify-content: center; opacity: 0.6;">💳 Cartão</button>
+            </div>
+          </div>
+          
+          <!-- Selo Integrado Conforme Playbook -->
+          <div style="border-top: 1px solid var(--border-thin); padding-top: 1.25rem; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; text-align: center;">
+            <a href="https://asaas.com" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
+              <img src="https://baas.asaas.com/selos/Servicos_financeiros_Asaas-Reduzida-Negativo-Branco.svg?id=e607d25d-fea6-436e-b300-b151c162b89f" alt="Selo Banco Asaas" width="140" height="42" style="display: inline-block; transition: transform var(--duration-fast) var(--ease-smooth);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'"/>
+            </a>
+            <p style="font-size: 0.68rem; color: var(--text-muted); line-height: 1.4; margin: 0;">
+              Os serviços de pagamento desta plataforma são processados pelo <strong>ASAAS GESTÃO FINANCEIRA S.A.</strong> (CNPJ 19.540.550/0001-21), instituição de pagamento autorizada pelo Banco Central. A NAVALIA opera como distribuidora e integradora tecnológica.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Bloco Legal / Regulatório de Referência -->
+        <div class="navalia-card navalia-card-primary" style="margin-top: 0.5rem;">
+          <h4 class="navalia-h4" style="margin-top:0; color: var(--accent-gold); display: flex; align-items: center; gap: 0.5rem;">
+            <span>⚖️</span> Cláusula de Transparência Regulatória (Termos de Uso)
+          </h4>
+          <p class="navalia-text" style="font-size: 0.85rem; line-height: 1.5; color: var(--text-main); margin-top: 0.75rem;">
+            Conforme exigido pelo Banco Central e detalhado nas diretrizes de homologação do Asaas, nossos Termos de Uso e documentação contratual incorporam a seguinte declaração padrão:
+          </p>
+          <div style="background: rgba(0,0,0,0.3); border-left: 3px solid var(--accent-gold); padding: 1rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; margin-top: 1rem;">
+            "Os serviços financeiros e de pagamentos disponibilizados por meio da presente plataforma, incluindo abertura e manutenção de conta de pagamento, processamento de transações, emissaõ de boletos, transferências, pagamentos e demais movimentações de valores, são prestados pelo ASAAS GESTÃO FINANCEIRA S.A., instituição de pagamento autorizada a funcionar pelo Banco Central do Brasil. A NAVALIA atua exclusivamente como integradora tecnológica e distribuidora da experiência do produto, não sendo instituição financeira ou de pagamento, nem realizando intermediação financeira em nome próprio."
+          </div>
+        </div>
+        
       </div>
     </section>
 
